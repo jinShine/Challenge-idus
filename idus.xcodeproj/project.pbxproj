@@ -19,6 +19,28 @@
 		5C1451CD2395211300441597 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1451CC2395211300441597 /* ProductListViewController.swift */; };
 		5C1451CF2395211E00441597 /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1451CE2395211E00441597 /* ProductListViewModel.swift */; };
 		5C1451D12395252000441597 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1451D02395252000441597 /* BaseNavigationController.swift */; };
+		5C1451D5239545E200441597 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1451D4239545E200441597 /* ProductCell.swift */; };
+		5C1451D72395487000441597 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1451D62395487000441597 /* BaseCollectionViewCell.swift */; };
+		5C1451D923954C3F00441597 /* UIView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1451D823954C3F00441597 /* UIView+Additions.swift */; };
+		5C1451DB23954C5400441597 /* CALayer+Sketch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1451DA23954C5400441597 /* CALayer+Sketch.swift */; };
+		5C1451DD23954D1B00441597 /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1451DC23954D1B00441597 /* UIColor+Additions.swift */; };
+		5C1451EA23955D6C00441597 /* NotoSansCJKkr-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5C1451E823955D6400441597 /* NotoSansCJKkr-Black.otf */; };
+		5C1451EB23955D6F00441597 /* NotoSansCJKkr-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5C1451E523955D6100441597 /* NotoSansCJKkr-Bold.otf */; };
+		5C1451EC23955D7200441597 /* NotoSansCJKkr-DemiLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5C1451E123955D5C00441597 /* NotoSansCJKkr-DemiLight.otf */; };
+		5C1451ED23955D7400441597 /* NotoSansCJKkr-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5C1451E423955D6000441597 /* NotoSansCJKkr-Light.otf */; };
+		5C1451EE23955D7700441597 /* NotoSansCJKkr-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5C1451E323955D5F00441597 /* NotoSansCJKkr-Medium.otf */; };
+		5C1451EF23955D7900441597 /* NotoSansCJKkr-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5C1451E223955D5D00441597 /* NotoSansCJKkr-Regular.otf */; };
+		5C1451F023955D7B00441597 /* NotoSansCJKkr-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5C1451E923955D6500441597 /* NotoSansCJKkr-Thin.otf */; };
+		5C1451F123955D7E00441597 /* NotoSansMonoCJKkr-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5C1451E623955D6200441597 /* NotoSansMonoCJKkr-Bold.otf */; };
+		5C1451F223955D8100441597 /* NotoSansMonoCJKkr-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5C1451E723955D6300441597 /* NotoSansMonoCJKkr-Regular.otf */; };
+		5C1451F423955E9400441597 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1451F323955E9400441597 /* Font.swift */; };
+		5C1451F623955EAA00441597 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1451F523955EAA00441597 /* App.swift */; };
+		5C1451F82395623200441597 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1451F72395623200441597 /* Color.swift */; };
+		5C14520023956B6A00441597 /* IdusRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1451FF23956B6A00441597 /* IdusRouter.swift */; };
+		5C14520223956E7700441597 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C14520123956E7700441597 /* NetworkService.swift */; };
+		5C1452042395705500441597 /* NetworkDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1452032395705500441597 /* NetworkDataResponse.swift */; };
+		5C1452062395707800441597 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1452052395707800441597 /* NetworkError.swift */; };
+		5C1452092395751A00441597 /* IdusErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1452082395751A00441597 /* IdusErrorModel.swift */; };
 		CFBA625EC56A705F0F790615 /* Pods_idusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CEF71EF7F67D6A9D8A98E2F /* Pods_idusTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +81,28 @@
 		5C1451CC2395211300441597 /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProductListViewController.swift; path = idus/Presentation/ProductListViewController.swift; sourceTree = SOURCE_ROOT; };
 		5C1451CE2395211E00441597 /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
 		5C1451D02395252000441597 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseNavigationController.swift; path = idus/BaseNavigationController.swift; sourceTree = SOURCE_ROOT; };
+		5C1451D4239545E200441597 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		5C1451D62395487000441597 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseCollectionViewCell.swift; path = idus/BaseCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
+		5C1451D823954C3F00441597 /* UIView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Additions.swift"; sourceTree = "<group>"; };
+		5C1451DA23954C5400441597 /* CALayer+Sketch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Sketch.swift"; sourceTree = "<group>"; };
+		5C1451DC23954D1B00441597 /* UIColor+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Additions.swift"; sourceTree = "<group>"; };
+		5C1451E123955D5C00441597 /* NotoSansCJKkr-DemiLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-DemiLight.otf"; sourceTree = "<group>"; };
+		5C1451E223955D5D00441597 /* NotoSansCJKkr-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Regular.otf"; sourceTree = "<group>"; };
+		5C1451E323955D5F00441597 /* NotoSansCJKkr-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Medium.otf"; sourceTree = "<group>"; };
+		5C1451E423955D6000441597 /* NotoSansCJKkr-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Light.otf"; sourceTree = "<group>"; };
+		5C1451E523955D6100441597 /* NotoSansCJKkr-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Bold.otf"; sourceTree = "<group>"; };
+		5C1451E623955D6200441597 /* NotoSansMonoCJKkr-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansMonoCJKkr-Bold.otf"; sourceTree = "<group>"; };
+		5C1451E723955D6300441597 /* NotoSansMonoCJKkr-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansMonoCJKkr-Regular.otf"; sourceTree = "<group>"; };
+		5C1451E823955D6400441597 /* NotoSansCJKkr-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Black.otf"; sourceTree = "<group>"; };
+		5C1451E923955D6500441597 /* NotoSansCJKkr-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Thin.otf"; sourceTree = "<group>"; };
+		5C1451F323955E9400441597 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		5C1451F523955EAA00441597 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = SOURCE_ROOT; };
+		5C1451F72395623200441597 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Color.swift; path = idus/Color.swift; sourceTree = SOURCE_ROOT; };
+		5C1451FF23956B6A00441597 /* IdusRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IdusRouter.swift; path = idus/Data/NetworkData/IdusRouter.swift; sourceTree = SOURCE_ROOT; };
+		5C14520123956E7700441597 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkService.swift; path = idus/Data/NetworkData/Service/NetworkService.swift; sourceTree = SOURCE_ROOT; };
+		5C1452032395705500441597 /* NetworkDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataResponse.swift; sourceTree = "<group>"; };
+		5C1452052395707800441597 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		5C1452082395751A00441597 /* IdusErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IdusErrorModel.swift; path = idus/Data/IdusErrorModel.swift; sourceTree = SOURCE_ROOT; };
 		5CEF71EF7F67D6A9D8A98E2F /* Pods_idusTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_idusTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71C4B71E969D1B7AAC3B4CB6 /* Pods-idusUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-idusUITests.release.xcconfig"; path = "Target Support Files/Pods-idusUITests/Pods-idusUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9C2D1C809C3AD2BE0966B477 /* Pods-idus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-idus.release.xcconfig"; path = "Target Support Files/Pods-idus/Pods-idus.release.xcconfig"; sourceTree = "<group>"; };
@@ -190,6 +234,7 @@
 		5C1451BD23951BF700441597 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				5C1451FB23956AF600441597 /* NetworkData */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -198,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				5C14518B239515F300441597 /* AppDelegate.swift */,
+				5C1451F523955EAA00441597 /* App.swift */,
 				5C1451C123951C4C00441597 /* Navigator */,
 				5C1451C723951CE700441597 /* Base */,
 			);
@@ -207,6 +253,8 @@
 		5C1451BF23951C0F00441597 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				5C1451DF23955BED00441597 /* Extension */,
+				5C1451DE23955BB800441597 /* Theme */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -214,6 +262,7 @@
 		5C1451C023951C1E00441597 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5C1451E023955D4D00441597 /* Font */,
 				5C145194239515F700441597 /* Assets.xcassets */,
 				5C145196239515F700441597 /* LaunchScreen.storyboard */,
 			);
@@ -242,6 +291,7 @@
 			children = (
 				5C1451CC2395211300441597 /* ProductListViewController.swift */,
 				5C1451CE2395211E00441597 /* ProductListViewModel.swift */,
+				5C1451D4239545E200441597 /* ProductCell.swift */,
 			);
 			path = ProductList;
 			sourceTree = "<group>";
@@ -258,8 +308,88 @@
 			children = (
 				5C1451C823951D3600441597 /* BaseViewController.swift */,
 				5C1451D02395252000441597 /* BaseNavigationController.swift */,
+				5C1451D62395487000441597 /* BaseCollectionViewCell.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		5C1451DE23955BB800441597 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				5C1451F323955E9400441597 /* Font.swift */,
+				5C1451F72395623200441597 /* Color.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		5C1451DF23955BED00441597 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5C1451D823954C3F00441597 /* UIView+Additions.swift */,
+				5C1451DA23954C5400441597 /* CALayer+Sketch.swift */,
+				5C1451DC23954D1B00441597 /* UIColor+Additions.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		5C1451E023955D4D00441597 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				5C1451E823955D6400441597 /* NotoSansCJKkr-Black.otf */,
+				5C1451E523955D6100441597 /* NotoSansCJKkr-Bold.otf */,
+				5C1451E123955D5C00441597 /* NotoSansCJKkr-DemiLight.otf */,
+				5C1451E423955D6000441597 /* NotoSansCJKkr-Light.otf */,
+				5C1451E323955D5F00441597 /* NotoSansCJKkr-Medium.otf */,
+				5C1451E223955D5D00441597 /* NotoSansCJKkr-Regular.otf */,
+				5C1451E923955D6500441597 /* NotoSansCJKkr-Thin.otf */,
+				5C1451E623955D6200441597 /* NotoSansMonoCJKkr-Bold.otf */,
+				5C1451E723955D6300441597 /* NotoSansMonoCJKkr-Regular.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		5C1451FB23956AF600441597 /* NetworkData */ = {
+			isa = PBXGroup;
+			children = (
+				5C1452072395743F00441597 /* Entity */,
+				5C1451FC23956B0100441597 /* Service */,
+			);
+			path = NetworkData;
+			sourceTree = "<group>";
+		};
+		5C1451FC23956B0100441597 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				5C1451FE23956B0D00441597 /* Network */,
+				5C1451FD23956B0A00441597 /* Router */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		5C1451FD23956B0A00441597 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				5C1451FF23956B6A00441597 /* IdusRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		5C1451FE23956B0D00441597 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				5C14520123956E7700441597 /* NetworkService.swift */,
+				5C1452032395705500441597 /* NetworkDataResponse.swift */,
+				5C1452052395707800441597 /* NetworkError.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		5C1452072395743F00441597 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				5C1452082395751A00441597 /* IdusErrorModel.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,7 +501,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C145198239515F700441597 /* LaunchScreen.storyboard in Resources */,
+				5C1451EF23955D7900441597 /* NotoSansCJKkr-Regular.otf in Resources */,
+				5C1451F223955D8100441597 /* NotoSansMonoCJKkr-Regular.otf in Resources */,
+				5C1451EE23955D7700441597 /* NotoSansCJKkr-Medium.otf in Resources */,
+				5C1451F023955D7B00441597 /* NotoSansCJKkr-Thin.otf in Resources */,
+				5C1451ED23955D7400441597 /* NotoSansCJKkr-Light.otf in Resources */,
+				5C1451EB23955D6F00441597 /* NotoSansCJKkr-Bold.otf in Resources */,
+				5C1451F123955D7E00441597 /* NotoSansMonoCJKkr-Bold.otf in Resources */,
 				5C145195239515F700441597 /* Assets.xcassets in Resources */,
+				5C1451EA23955D6C00441597 /* NotoSansCJKkr-Black.otf in Resources */,
+				5C1451EC23955D7200441597 /* NotoSansCJKkr-DemiLight.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,11 +621,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C14520023956B6A00441597 /* IdusRouter.swift in Sources */,
+				5C1451F623955EAA00441597 /* App.swift in Sources */,
+				5C1451D923954C3F00441597 /* UIView+Additions.swift in Sources */,
 				5C1451D12395252000441597 /* BaseNavigationController.swift in Sources */,
 				5C1451CB23951FBC00441597 /* Navigator.swift in Sources */,
+				5C1451D72395487000441597 /* BaseCollectionViewCell.swift in Sources */,
+				5C1451DB23954C5400441597 /* CALayer+Sketch.swift in Sources */,
+				5C1451DD23954D1B00441597 /* UIColor+Additions.swift in Sources */,
+				5C1452092395751A00441597 /* IdusErrorModel.swift in Sources */,
 				5C1451CF2395211E00441597 /* ProductListViewModel.swift in Sources */,
 				5C1451CD2395211300441597 /* ProductListViewController.swift in Sources */,
+				5C1452042395705500441597 /* NetworkDataResponse.swift in Sources */,
+				5C14520223956E7700441597 /* NetworkService.swift in Sources */,
+				5C1451F82395623200441597 /* Color.swift in Sources */,
+				5C1451F423955E9400441597 /* Font.swift in Sources */,
 				5C1451C923951D3600441597 /* BaseViewController.swift in Sources */,
+				5C1452062395707800441597 /* NetworkError.swift in Sources */,
+				5C1451D5239545E200441597 /* ProductCell.swift in Sources */,
 				5C14518C239515F300441597 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

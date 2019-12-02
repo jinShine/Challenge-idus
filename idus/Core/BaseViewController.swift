@@ -10,7 +10,7 @@ import UIKit
 
 class BaseViewController: UIViewController {
   
-  //MARK:- init
+  //MARK:- Init
   init() {
     super.init(nibName: nil, bundle: nil)
   }
@@ -23,6 +23,16 @@ class BaseViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    NetworkService().buildRequest(to: .productsDetail(page: "Adsfadfa")) { response in
+      do {
+        let result = try JSONDecoder().decode(IdusErrorModel.self, from: response.jsonData!)
+        print("RESULT!!!!!!!!!", result)
+      } catch {
+        print("Decodable!!!!!!!!!", error)
+      }
+      
+      
+    }
   }
   
   deinit {
