@@ -10,13 +10,15 @@
 		1DA2EB5593DC511B3ECCB80A /* Pods_idusUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 051C8CD8614A4B5FE42DA30C /* Pods_idusUITests.framework */; };
 		4DB2A6DEA279B8087629844B /* Pods_idus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12811E7E09BA13AA43AB48D /* Pods_idus.framework */; };
 		5C14518C239515F300441597 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C14518B239515F300441597 /* AppDelegate.swift */; };
-		5C145190239515F300441597 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C14518F239515F300441597 /* ViewController.swift */; };
 		5C145195239515F700441597 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C145194239515F700441597 /* Assets.xcassets */; };
 		5C145198239515F700441597 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C145196239515F700441597 /* LaunchScreen.storyboard */; };
 		5C1451A3239515F700441597 /* idusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1451A2239515F700441597 /* idusTests.swift */; };
 		5C1451AE239515F700441597 /* idusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1451AD239515F700441597 /* idusUITests.swift */; };
 		5C1451C923951D3600441597 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1451C823951D3600441597 /* BaseViewController.swift */; };
 		5C1451CB23951FBC00441597 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1451CA23951FBC00441597 /* Navigator.swift */; };
+		5C1451CD2395211300441597 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1451CC2395211300441597 /* ProductListViewController.swift */; };
+		5C1451CF2395211E00441597 /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1451CE2395211E00441597 /* ProductListViewModel.swift */; };
+		5C1451D12395252000441597 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1451D02395252000441597 /* BaseNavigationController.swift */; };
 		CFBA625EC56A705F0F790615 /* Pods_idusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CEF71EF7F67D6A9D8A98E2F /* Pods_idusTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,7 +45,6 @@
 		051C8CD8614A4B5FE42DA30C /* Pods_idusUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_idusUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C145188239515F300441597 /* idus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = idus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C14518B239515F300441597 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5C14518F239515F300441597 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5C145194239515F700441597 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C145197239515F700441597 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C145199239515F700441597 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,6 +56,9 @@
 		5C1451AF239515F700441597 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C1451C823951D3600441597 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = idus/Core/BaseViewController.swift; sourceTree = SOURCE_ROOT; };
 		5C1451CA23951FBC00441597 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		5C1451CC2395211300441597 /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProductListViewController.swift; path = idus/Presentation/ProductListViewController.swift; sourceTree = SOURCE_ROOT; };
+		5C1451CE2395211E00441597 /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
+		5C1451D02395252000441597 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseNavigationController.swift; path = idus/BaseNavigationController.swift; sourceTree = SOURCE_ROOT; };
 		5CEF71EF7F67D6A9D8A98E2F /* Pods_idusTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_idusTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71C4B71E969D1B7AAC3B4CB6 /* Pods-idusUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-idusUITests.release.xcconfig"; path = "Target Support Files/Pods-idusUITests/Pods-idusUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9C2D1C809C3AD2BE0966B477 /* Pods-idus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-idus.release.xcconfig"; path = "Target Support Files/Pods-idus/Pods-idus.release.xcconfig"; sourceTree = "<group>"; };
@@ -212,7 +216,6 @@
 			children = (
 				5C145194239515F700441597 /* Assets.xcassets */,
 				5C145196239515F700441597 /* LaunchScreen.storyboard */,
-				5C14518F239515F300441597 /* ViewController.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -237,6 +240,8 @@
 		5C1451C523951C7F00441597 /* ProductList */ = {
 			isa = PBXGroup;
 			children = (
+				5C1451CC2395211300441597 /* ProductListViewController.swift */,
+				5C1451CE2395211E00441597 /* ProductListViewModel.swift */,
 			);
 			path = ProductList;
 			sourceTree = "<group>";
@@ -252,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				5C1451C823951D3600441597 /* BaseViewController.swift */,
+				5C1451D02395252000441597 /* BaseNavigationController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -476,8 +482,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C145190239515F300441597 /* ViewController.swift in Sources */,
+				5C1451D12395252000441597 /* BaseNavigationController.swift in Sources */,
 				5C1451CB23951FBC00441597 /* Navigator.swift in Sources */,
+				5C1451CF2395211E00441597 /* ProductListViewModel.swift in Sources */,
+				5C1451CD2395211300441597 /* ProductListViewController.swift in Sources */,
 				5C1451C923951D3600441597 /* BaseViewController.swift in Sources */,
 				5C14518C239515F300441597 /* AppDelegate.swift in Sources */,
 			);

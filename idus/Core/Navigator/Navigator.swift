@@ -6,8 +6,22 @@
 //  Copyright © 2019 Jinnify. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 enum Navigator {
+  case productList
+}
+
+extension Navigator {
   
+  var navigate: UIViewController {
+    switch self {
+    case .productList:
+      let viewModel = ProductListViewModel()
+      let viewController = ProductListViewController(viewModel: viewModel)
+      let navigationController = BaseNavigationController(rootViewController: viewController)
+      
+      return navigationController
+    }
+  }
 }

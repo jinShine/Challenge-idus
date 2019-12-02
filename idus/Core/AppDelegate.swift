@@ -15,15 +15,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     
-    let window = UIWindow(frame: UIScreen.main.bounds)
-    window.rootViewController = ViewController()
-    window.makeKeyAndVisible()
-    self.window = window
+    setupRoot()
     
     return true
   }
-
-
-
+  
+  private func setupRoot() {
+    let window = UIWindow(frame: UIScreen.main.bounds)
+    window.rootViewController = Navigator.productList.navigate
+    window.backgroundColor = .white
+    window.makeKeyAndVisible()
+    self.window = window
+  }
+  
 }
 
