@@ -20,6 +20,7 @@ private func functionName(_ function: String) -> String {
 }
 
 //MARK:- Log
+
 public func DLog<T>(_ message: T, file: String = #file, function: String = #function, line: Int = #line) {
   print("📣 [\(filename(file))]\(functionName(function))(\(line)): \(message)")
 }

@@ -11,6 +11,7 @@ import UIKit
 class BaseViewController: UIViewController {
   
   //MARK:- Init
+  
   init() {
     super.init(nibName: nil, bundle: nil)
   }
@@ -20,6 +21,7 @@ class BaseViewController: UIViewController {
   }
   
   //MARK:- Life Cycle
+  
   override func viewDidLoad() {
     super.viewDidLoad()
 
@@ -33,6 +35,7 @@ class BaseViewController: UIViewController {
 
 
   //MARK:- Methods
+  
   func setupUI() { }
 
   func setupConstraints() { }

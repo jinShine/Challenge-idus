@@ -9,6 +9,7 @@
 import UIKit
 
 //MARK:- Collection view data source
+
 extension ProductListViewController: UICollectionViewDataSource {
 
   func collectionView(_ collectionView: UICollectionView,
@@ -25,6 +26,7 @@ extension ProductListViewController: UICollectionViewDataSource {
 }
 
 //MARK:- Collection view delegate
+
 extension ProductListViewController: UICollectionViewDelegate {
 
   func collectionView(_ collectionView: UICollectionView,
@@ -35,6 +37,7 @@ extension ProductListViewController: UICollectionViewDelegate {
 }
 
 //MARK:- Collection view flow layout
+
 extension ProductListViewController: UICollectionViewDelegateFlowLayout {
 
   func collectionView(_ collectionView: UICollectionView,
@@ -72,6 +75,7 @@ extension ProductListViewController: UICollectionViewDelegateFlowLayout {
 }
 
 //MARK:- CollectionView decorator
+
 extension ProductListViewController: CollectionViewDecorator {
 
   func configureCell(collectionView: UICollectionView,

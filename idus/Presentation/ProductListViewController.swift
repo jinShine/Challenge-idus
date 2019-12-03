@@ -12,6 +12,7 @@ import SnapKit
 final class ProductListViewController: BaseViewController {
   
   //MARK:- Constant
+  
   struct UI {
 
     static let maxTitleHeight: CGFloat = 40
@@ -27,6 +28,7 @@ final class ProductListViewController: BaseViewController {
 
 
   //MARK:- UI Properties
+  
   lazy var collectionView: UICollectionView = {
     let layout = UICollectionViewFlowLayout()
     let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -41,10 +43,12 @@ final class ProductListViewController: BaseViewController {
   
 
   //MARK:- Properties
+  
   let viewModel: ProductListViewModel
   
   
   //MARK:- Init
+  
   init(viewModel: ProductListViewModel) {
     self.viewModel = viewModel
     
@@ -57,6 +61,7 @@ final class ProductListViewController: BaseViewController {
   
   
   //MARK:- Life Cycle
+  
   override func viewDidLoad() {
     super.viewDidLoad()
 

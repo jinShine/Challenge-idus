@@ -11,11 +11,13 @@ import UIKit
 class BaseNavigationController: UINavigationController {
   
   //MARK:- Constant
+  
   struct UI {
     static let layerColor: UIColor = UIColor(r: 24, g: 24, b: 80, a: 0.12)
   }
   
   //MARK:- Life Cycle
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -23,6 +25,7 @@ class BaseNavigationController: UINavigationController {
   }
   
   //MARK:- Methods
+  
   private func setupUI() {
     navigationBar.shadowImage = UIImage()
     navigationBar.isTranslucent = false

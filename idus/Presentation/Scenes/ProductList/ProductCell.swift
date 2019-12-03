@@ -11,11 +11,13 @@ import UIKit
 final class ProductCell: BaseCollectionViewCell {
   
   //MARK:- Constant
+  
   struct UI {
     static let productImageRadius: CGFloat = 14
   }
   
   //MARK:- UI Properties
+  
   let productImageView: UIImageView = {
     let imageView = UIImageView()
     imageView.contentMode = .scaleAspectFill
@@ -49,9 +51,10 @@ final class ProductCell: BaseCollectionViewCell {
     stackView.distribution = .fill
     return stackView
   }()
-
-
+  
+  
   //MARK:- Properties
+  
   var viewModel: ProductCellViewModel! {
     didSet {
       let imageURL = URL(string: viewModel.productImage)
@@ -63,19 +66,19 @@ final class ProductCell: BaseCollectionViewCell {
   
   
   //MARK:- Life Cycle
+  
   override init(frame: CGRect) {
     super.init(frame: frame)
-    backgroundColor = .red
-    setupUI()
-    setupConstraints()
+
   }
   
   required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
-
+  
   
   //MARK:- Methods
+  
   override func setupUI() {
     productImageView.layer.applyShadow(color: App.color.darkBlueGrey, alpha: 0, x: 0, y: 0, blur: 0, spread: 1)
   }
@@ -97,7 +100,7 @@ final class ProductCell: BaseCollectionViewCell {
       $0.trailing.equalToSuperview().offset(-8)
       $0.bottom.equalToSuperview()
     }
-  
+    
   }
   
 }
