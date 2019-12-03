@@ -33,14 +33,23 @@ struct NetworkService {
     return provider
   }()
   
-  
-  func buildRequest(to router: IdusRouter, completion: @escaping (NetworkDataResponse) -> Void)  {
+
+  func buildRequest<T: Decodable>(to router: IdusRouter,
+                                  decoder: T.Type,
+                                  completion: @escaping (NetworkDataResponse) -> Void) {
+
     provider.request(router) { response in
       switch response {
       case .success(let result):
-        completion(NetworkDataResponse(jsonData: result.data, result: .success))
+        do {
+          let model = try result.data.decode(decoder)
+          completion(NetworkDataResponse(model: model, result: .success, error: nil))
+        } catch {
+          DLog("buildRequest Decodable Error")
+        }
       case .failure:
-        completion(NetworkDataResponse(jsonData: response.value?.data, result: .failure))
+        let errorJsonData = response.value?.data
+        completion(NetworkError.transform(jsonData: errorJsonData))
       }
     }
   }

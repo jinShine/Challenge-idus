@@ -8,14 +8,23 @@
 
 import Foundation
 
-enum NetworkStatusCode: Int {
-  case ok = 200
-  case badRequest = 400
-  case notFound = 404
-  case serverError = 500
+struct NetworkError {
+  let statusCode: Int
+  let message: String
+
+  static func transform(jsonData: Data?) -> NetworkDataResponse {
+
+    do {
+      let result = try JSONDecoder().decode(IdusErrorModel.self, from: jsonData!)
+      DLog(result)
+      return NetworkDataResponse(model: nil,
+                          result: .failure,
+                          error: NetworkError(statusCode: result.statusCode, message: result.body))
+    } catch {
+      DLog("NetworkError Decodable Error")
+      return NetworkDataResponse(model: nil, result: .failure, error: nil)
+    }
+
+  }
 }
 
-struct NetworkError {
-  let statusCode: NetworkStatusCode
-  let body: String
-}
