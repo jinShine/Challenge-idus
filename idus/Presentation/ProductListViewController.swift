@@ -73,6 +73,8 @@ final class ProductListViewController: BaseViewController {
   
   override func setupUI() {
     
+    [collectionView].forEach { view.addSubview($0) }
+    
     //Navigation
     let naviImage = UIImage(named: "storefront")
     navigationItem.titleView = UIImageView(image: naviImage)
@@ -81,11 +83,8 @@ final class ProductListViewController: BaseViewController {
   
   override func setupConstraints() {
     
-    [collectionView].forEach { view.addSubview($0) }
-
     collectionView.snp.makeConstraints {
-      $0.top.equalToSuperview()
-      $0.leading.trailing.bottom.equalToSuperview()
+      $0.edges.equalToSuperview()
     }
 
   }

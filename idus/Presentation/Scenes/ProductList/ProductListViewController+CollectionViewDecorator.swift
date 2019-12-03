@@ -33,6 +33,12 @@ extension ProductListViewController: UICollectionViewDelegate {
                       didSelectItemAt indexPath: IndexPath) {
 
   }
+  
+  func collectionView(_ collectionView: UICollectionView,
+                      willDisplay cell: UICollectionViewCell,
+                      forItemAt indexPath: IndexPath) {
+    DLog(indexPath)
+  }
 
 }
 
@@ -48,7 +54,7 @@ extension ProductListViewController: UICollectionViewDelegateFlowLayout {
       - (UI.CollectionView.inset.left)
       - (UI.CollectionView.itemSpacing / UI.CollectionView.column)
 
-    let calculatedHeight = calculatedWidth + UI.maxTitleHeight + UI.maxSellerHeight
+    let calculatedHeight = calculatedWidth + UI.maxTitleHeight + UI.maxSellerHeight + 4
 
     return CGSize(width: calculatedWidth , height: calculatedHeight)
   }

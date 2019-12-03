@@ -14,6 +14,9 @@ final class ProductCell: BaseCollectionViewCell {
   
   struct UI {
     static let productImageRadius: CGFloat = 14
+    static let titleTopMargin: CGFloat = 4
+    static let titleLeftMargin: CGFloat = 8
+    static let titleRightMargin: CGFloat = -8
   }
   
   //MARK:- UI Properties
@@ -40,16 +43,6 @@ final class ProductCell: BaseCollectionViewCell {
     label.font = App.font.notoSansBold(size: 14)
     label.textColor = App.color.blueGrey
     return label
-  }()
-  
-  lazy var containerStackView: UIStackView = {
-    let stackView = UIStackView(arrangedSubviews: [
-      self.titleLabel,
-      self.sellerLabel
-    ])
-    stackView.axis = .vertical
-    stackView.distribution = .fill
-    return stackView
   }()
   
   
@@ -80,27 +73,34 @@ final class ProductCell: BaseCollectionViewCell {
   //MARK:- Methods
   
   override func setupUI() {
+    
+    [productImageView, titleLabel, sellerLabel].forEach {
+      contentView.addSubview($0)
+    }
+    
     productImageView.layer.applyShadow(color: App.color.darkBlueGrey, alpha: 0, x: 0, y: 0, blur: 0, spread: 1)
   }
   
   override func setupConstraints() {
     
-    [productImageView, containerStackView].forEach {
-      contentView.addSubview($0)
-    }
-    
     productImageView.snp.makeConstraints {
       $0.top.leading.trailing.equalToSuperview()
       $0.height.equalTo(productImageView.snp.width)
     }
-    
-    containerStackView.snp.makeConstraints {
-      $0.top.equalTo(productImageView.snp.bottom).offset(4)
-      $0.leading.equalToSuperview().offset(8)
-      $0.trailing.equalToSuperview().offset(-8)
-      $0.bottom.equalToSuperview()
+
+    titleLabel.snp.makeConstraints {
+      $0.top.equalTo(productImageView.snp.bottom).offset(UI.titleTopMargin)
+      $0.leading.equalTo(productImageView).offset(UI.titleLeftMargin)
+      $0.trailing.equalTo(productImageView).offset(UI.titleRightMargin)
     }
     
+    sellerLabel.snp.makeConstraints {
+      $0.top.equalTo(titleLabel.snp.bottom)
+      $0.leading.equalTo(titleLabel)
+      $0.trailing.equalTo(titleLabel)
+      $0.bottom.lessThanOrEqualToSuperview()
+    }
+
   }
   
 }
