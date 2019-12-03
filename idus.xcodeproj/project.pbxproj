@@ -41,6 +41,15 @@
 		5C1452042395705500441597 /* NetworkDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1452032395705500441597 /* NetworkDataResponse.swift */; };
 		5C1452062395707800441597 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1452052395707800441597 /* NetworkError.swift */; };
 		5C1452092395751A00441597 /* IdusErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1452082395751A00441597 /* IdusErrorModel.swift */; };
+		5C681CF02395F4A8000189F2 /* ProductListViewController+CollectionViewDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C681CEF2395F4A8000189F2 /* ProductListViewController+CollectionViewDecorator.swift */; };
+		5C681CF22395F791000189F2 /* CollectionViewDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C681CF12395F791000189F2 /* CollectionViewDecorator.swift */; };
+		5CBCBE142396070C0098A60D /* ProductCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBCBE132396070C0098A60D /* ProductCellViewModel.swift */; };
+		5CBCBE19239608DA0098A60D /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBCBE18239608DA0098A60D /* ProductModel.swift */; };
+		5CFD687A23961DDF004E19E4 /* IdusUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFD687923961DDF004E19E4 /* IdusUseCase.swift */; };
+		5CFD687D23961EC6004E19E4 /* IdusRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFD687C23961EC6004E19E4 /* IdusRepository.swift */; };
+		5CFD688023961F53004E19E4 /* IdusRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFD687F23961F53004E19E4 /* IdusRepositoryType.swift */; };
+		5CFD688323962197004E19E4 /* DebugPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFD688223962197004E19E4 /* DebugPrint.swift */; };
+		5CFD6885239637C9004E19E4 /* Data+Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFD6884239637C9004E19E4 /* Data+Decode.swift */; };
 		CFBA625EC56A705F0F790615 /* Pods_idusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CEF71EF7F67D6A9D8A98E2F /* Pods_idusTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -102,8 +111,17 @@
 		5C14520123956E7700441597 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkService.swift; path = idus/Data/NetworkData/Service/NetworkService.swift; sourceTree = SOURCE_ROOT; };
 		5C1452032395705500441597 /* NetworkDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataResponse.swift; sourceTree = "<group>"; };
 		5C1452052395707800441597 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
-		5C1452082395751A00441597 /* IdusErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IdusErrorModel.swift; path = idus/Data/IdusErrorModel.swift; sourceTree = SOURCE_ROOT; };
+		5C1452082395751A00441597 /* IdusErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IdusErrorModel.swift; path = idus/Domain/Entity/IdusErrorModel.swift; sourceTree = SOURCE_ROOT; };
+		5C681CEF2395F4A8000189F2 /* ProductListViewController+CollectionViewDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductListViewController+CollectionViewDecorator.swift"; sourceTree = "<group>"; };
+		5C681CF12395F791000189F2 /* CollectionViewDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CollectionViewDecorator.swift; path = idus/Presentation/Scenes/ProductList/CollectionViewDecorator.swift; sourceTree = SOURCE_ROOT; };
+		5CBCBE132396070C0098A60D /* ProductCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellViewModel.swift; sourceTree = "<group>"; };
+		5CBCBE18239608DA0098A60D /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		5CEF71EF7F67D6A9D8A98E2F /* Pods_idusTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_idusTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CFD687923961DDF004E19E4 /* IdusUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdusUseCase.swift; sourceTree = "<group>"; };
+		5CFD687C23961EC6004E19E4 /* IdusRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdusRepository.swift; sourceTree = "<group>"; };
+		5CFD687F23961F53004E19E4 /* IdusRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdusRepositoryType.swift; sourceTree = "<group>"; };
+		5CFD688223962197004E19E4 /* DebugPrint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugPrint.swift; sourceTree = "<group>"; };
+		5CFD6884239637C9004E19E4 /* Data+Decode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Decode.swift"; sourceTree = "<group>"; };
 		71C4B71E969D1B7AAC3B4CB6 /* Pods-idusUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-idusUITests.release.xcconfig"; path = "Target Support Files/Pods-idusUITests/Pods-idusUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9C2D1C809C3AD2BE0966B477 /* Pods-idus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-idus.release.xcconfig"; path = "Target Support Files/Pods-idus/Pods-idus.release.xcconfig"; sourceTree = "<group>"; };
 		C12811E7E09BA13AA43AB48D /* Pods_idus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_idus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -227,6 +245,9 @@
 		5C1451BC23951BF200441597 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				5CFD687823961D90004E19E4 /* UseCase */,
+				5CBCBE17239608B10098A60D /* Entity */,
+				5CFD687E23961F2B004E19E4 /* RepositoryType */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -253,6 +274,7 @@
 		5C1451BF23951C0F00441597 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				5CFD688123962184004E19E4 /* Debug */,
 				5C1451DF23955BED00441597 /* Extension */,
 				5C1451DE23955BB800441597 /* Theme */,
 			);
@@ -291,7 +313,9 @@
 			children = (
 				5C1451CC2395211300441597 /* ProductListViewController.swift */,
 				5C1451CE2395211E00441597 /* ProductListViewModel.swift */,
+				5C681CEF2395F4A8000189F2 /* ProductListViewController+CollectionViewDecorator.swift */,
 				5C1451D4239545E200441597 /* ProductCell.swift */,
+				5CBCBE132396070C0098A60D /* ProductCellViewModel.swift */,
 			);
 			path = ProductList;
 			sourceTree = "<group>";
@@ -309,6 +333,7 @@
 				5C1451C823951D3600441597 /* BaseViewController.swift */,
 				5C1451D02395252000441597 /* BaseNavigationController.swift */,
 				5C1451D62395487000441597 /* BaseCollectionViewCell.swift */,
+				5C681CF12395F791000189F2 /* CollectionViewDecorator.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -328,6 +353,7 @@
 				5C1451D823954C3F00441597 /* UIView+Additions.swift */,
 				5C1451DA23954C5400441597 /* CALayer+Sketch.swift */,
 				5C1451DC23954D1B00441597 /* UIColor+Additions.swift */,
+				5CFD6884239637C9004E19E4 /* Data+Decode.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -351,7 +377,7 @@
 		5C1451FB23956AF600441597 /* NetworkData */ = {
 			isa = PBXGroup;
 			children = (
-				5C1452072395743F00441597 /* Entity */,
+				5CFD687B23961EA2004E19E4 /* Repository */,
 				5C1451FC23956B0100441597 /* Service */,
 			);
 			path = NetworkData;
@@ -384,12 +410,45 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		5C1452072395743F00441597 /* Entity */ = {
+		5CBCBE17239608B10098A60D /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				5CBCBE18239608DA0098A60D /* ProductModel.swift */,
 				5C1452082395751A00441597 /* IdusErrorModel.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		5CFD687823961D90004E19E4 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				5CFD687923961DDF004E19E4 /* IdusUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		5CFD687B23961EA2004E19E4 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				5CFD687C23961EC6004E19E4 /* IdusRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		5CFD687E23961F2B004E19E4 /* RepositoryType */ = {
+			isa = PBXGroup;
+			children = (
+				5CFD687F23961F53004E19E4 /* IdusRepositoryType.swift */,
+			);
+			path = RepositoryType;
+			sourceTree = "<group>";
+		};
+		5CFD688123962184004E19E4 /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				5CFD688223962197004E19E4 /* DebugPrint.swift */,
+			);
+			path = Debug;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -621,6 +680,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CBCBE142396070C0098A60D /* ProductCellViewModel.swift in Sources */,
 				5C14520023956B6A00441597 /* IdusRouter.swift in Sources */,
 				5C1451F623955EAA00441597 /* App.swift in Sources */,
 				5C1451D923954C3F00441597 /* UIView+Additions.swift in Sources */,
@@ -628,17 +688,25 @@
 				5C1451CB23951FBC00441597 /* Navigator.swift in Sources */,
 				5C1451D72395487000441597 /* BaseCollectionViewCell.swift in Sources */,
 				5C1451DB23954C5400441597 /* CALayer+Sketch.swift in Sources */,
+				5CFD688323962197004E19E4 /* DebugPrint.swift in Sources */,
+				5CFD6885239637C9004E19E4 /* Data+Decode.swift in Sources */,
+				5C681CF22395F791000189F2 /* CollectionViewDecorator.swift in Sources */,
 				5C1451DD23954D1B00441597 /* UIColor+Additions.swift in Sources */,
 				5C1452092395751A00441597 /* IdusErrorModel.swift in Sources */,
 				5C1451CF2395211E00441597 /* ProductListViewModel.swift in Sources */,
 				5C1451CD2395211300441597 /* ProductListViewController.swift in Sources */,
+				5C681CF02395F4A8000189F2 /* ProductListViewController+CollectionViewDecorator.swift in Sources */,
+				5CFD688023961F53004E19E4 /* IdusRepositoryType.swift in Sources */,
 				5C1452042395705500441597 /* NetworkDataResponse.swift in Sources */,
 				5C14520223956E7700441597 /* NetworkService.swift in Sources */,
 				5C1451F82395623200441597 /* Color.swift in Sources */,
 				5C1451F423955E9400441597 /* Font.swift in Sources */,
+				5CFD687A23961DDF004E19E4 /* IdusUseCase.swift in Sources */,
+				5CBCBE19239608DA0098A60D /* ProductModel.swift in Sources */,
 				5C1451C923951D3600441597 /* BaseViewController.swift in Sources */,
 				5C1452062395707800441597 /* NetworkError.swift in Sources */,
 				5C1451D5239545E200441597 /* ProductCell.swift in Sources */,
+				5CFD687D23961EC6004E19E4 /* IdusRepository.swift in Sources */,
 				5C14518C239515F300441597 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

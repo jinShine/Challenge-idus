@@ -17,7 +17,9 @@ extension Navigator {
   var navigate: UIViewController {
     switch self {
     case .productList:
-      let viewModel = ProductListViewModel()
+      let viewModel = ProductListViewModel(
+        idusUseCase: IdusUseCaseImpl(idusRepository: IdusRepository())
+      )
       let viewController = ProductListViewController(viewModel: viewModel)
       let navigationController = BaseNavigationController(rootViewController: viewController)
       

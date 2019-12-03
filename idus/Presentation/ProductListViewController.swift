@@ -13,10 +13,12 @@ final class ProductListViewController: BaseViewController {
   
   //MARK:- Constant
   struct UI {
-    
+
+    static let maxTitleHeight: CGFloat = 40
+    static let maxSellerHeight: CGFloat = 20
+
     struct CollectionView {
       static let inset: UIEdgeInsets = UIEdgeInsets(top: 24, left: 12, bottom: 24, right: 12)
-      static let height: CGFloat = 236
       static let column: CGFloat = 2
       static let itemSpacing: CGFloat = 7
       static let lineSpacing: CGFloat = 24
@@ -58,14 +60,13 @@ final class ProductListViewController: BaseViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    setupUI()
-    setupConstraints()
+    bind()
   }
   
   
   //MARK:- Methods
   
-  private func setupUI() {
+  override func setupUI() {
     
     //Navigation
     let naviImage = UIImage(named: "storefront")
@@ -73,7 +74,7 @@ final class ProductListViewController: BaseViewController {
     
   }
   
-  private func setupConstraints() {
+  override func setupConstraints() {
     
     [collectionView].forEach { view.addSubview($0) }
 
@@ -81,73 +82,22 @@ final class ProductListViewController: BaseViewController {
       $0.top.equalToSuperview()
       $0.leading.trailing.bottom.equalToSuperview()
     }
-    
-    
-    
-  }
-  
-}
 
-extension ProductListViewController: UICollectionViewDataSource {
-  
-  func collectionView(_ collectionView: UICollectionView,
-                      numberOfItemsInSection section: Int) -> Int {
-    return 5
   }
-  
-  func collectionView(_ collectionView: UICollectionView,
-                      cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductCell.reuseIdentifier, for: indexPath) as! ProductCell
-    
-    if indexPath.row == 2 {
-        cell.titleLabel.text = "라탄오브제"
+
+  private func bind() {
+
+    viewModel.productListUpdate { [weak self] response in
+      if response.result == .failure {
+        DLog(response.error?.message)
+        return
+      }
+
+      DispatchQueue.main.async {
+        self?.collectionView.reloadData()
+      }
     }
-    
-    
-    return cell
-  }
-  
-}
 
-extension ProductListViewController: UICollectionViewDelegate {
-    
-  func collectionView(_ collectionView: UICollectionView,
-                      didSelectItemAt indexPath: IndexPath) {
-    
-  }
-  
-}
-
-extension ProductListViewController: UICollectionViewDelegateFlowLayout {
-  
-  func collectionView(_ collectionView: UICollectionView,
-                      layout collectionViewLayout: UICollectionViewLayout,
-                      sizeForItemAt indexPath: IndexPath) -> CGSize {
-    
-    let calculatedWidth = (collectionView.frame.width / UI.CollectionView.column)
-      - (UI.CollectionView.inset.left * UI.CollectionView.column)
-      - (UI.CollectionView.itemSpacing / UI.CollectionView.column)
-    
-    return CGSize(width: calculatedWidth , height: UI.CollectionView.height)
-  }
-  
-  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-    
-    return UI.CollectionView.inset
-  }
-  
-  func collectionView(_ collectionView: UICollectionView,
-                      layout collectionViewLayout: UICollectionViewLayout,
-                      minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-    
-    return UI.CollectionView.itemSpacing
-  }
-  
-  func collectionView(_ collectionView: UICollectionView,
-                      layout collectionViewLayout: UICollectionViewLayout,
-                      minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-    
-    return UI.CollectionView.lineSpacing
   }
   
 }

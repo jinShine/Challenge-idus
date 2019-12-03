@@ -12,14 +12,15 @@ final class ProductCell: BaseCollectionViewCell {
   
   //MARK:- Constant
   struct UI {
-    static let productImageSize: CGFloat = 172
+    static let productImageRadius: CGFloat = 14
   }
   
   //MARK:- UI Properties
   let productImageView: UIImageView = {
     let imageView = UIImageView()
     imageView.contentMode = .scaleAspectFill
-    imageView.image = UIImage(named: "storefront")
+    imageView.clipsToBounds = true
+    imageView.layer.cornerRadius = UI.productImageRadius
     return imageView
   }()
   
@@ -28,7 +29,6 @@ final class ProductCell: BaseCollectionViewCell {
     label.numberOfLines = 2
     label.font = App.font.notoSansBlack(size: 14)
     label.textColor = App.color.dark
-    label.text = "반려동물 키링+일러스트 배경화면/ 드로잉키링"
     return label
   }()
   
@@ -37,7 +37,6 @@ final class ProductCell: BaseCollectionViewCell {
     label.numberOfLines = 1
     label.font = App.font.notoSansBold(size: 14)
     label.textColor = App.color.blueGrey
-    label.text = "작은작업실"
     return label
   }()
   
@@ -47,14 +46,26 @@ final class ProductCell: BaseCollectionViewCell {
       self.sellerLabel
     ])
     stackView.axis = .vertical
+    stackView.distribution = .fill
     return stackView
   }()
+
+
+  //MARK:- Properties
+  var viewModel: ProductCellViewModel! {
+    didSet {
+      let imageURL = URL(string: viewModel.productImage)
+      productImageView.kf.setImage(with: imageURL)
+      titleLabel.text = viewModel.title
+      sellerLabel.text = viewModel.seller
+    }
+  }
   
   
   //MARK:- Life Cycle
   override init(frame: CGRect) {
     super.init(frame: frame)
-    
+    backgroundColor = .red
     setupUI()
     setupConstraints()
   }
@@ -65,12 +76,11 @@ final class ProductCell: BaseCollectionViewCell {
 
   
   //MARK:- Methods
-  private func setupUI() {
-    
+  override func setupUI() {
     productImageView.layer.applyShadow(color: App.color.darkBlueGrey, alpha: 0, x: 0, y: 0, blur: 0, spread: 1)
   }
   
-  private func setupConstraints() {
+  override func setupConstraints() {
     
     [productImageView, containerStackView].forEach {
       contentView.addSubview($0)
@@ -78,14 +88,14 @@ final class ProductCell: BaseCollectionViewCell {
     
     productImageView.snp.makeConstraints {
       $0.top.leading.trailing.equalToSuperview()
-      $0.size.equalTo(UI.productImageSize)
+      $0.height.equalTo(productImageView.snp.width)
     }
     
     containerStackView.snp.makeConstraints {
-      $0.top.equalTo(productImageView.snp.bottom).offset(4).priority(.high)
+      $0.top.equalTo(productImageView.snp.bottom).offset(4)
       $0.leading.equalToSuperview().offset(8)
       $0.trailing.equalToSuperview().offset(-8)
-      $0.bottom.equalToSuperview().priority(.low)
+      $0.bottom.equalToSuperview()
     }
   
   }

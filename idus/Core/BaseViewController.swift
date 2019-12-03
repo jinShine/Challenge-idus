@@ -22,21 +22,19 @@ class BaseViewController: UIViewController {
   //MARK:- Life Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    NetworkService().buildRequest(to: .productsDetail(page: "Adsfadfa")) { response in
-      do {
-        let result = try JSONDecoder().decode(IdusErrorModel.self, from: response.jsonData!)
-        print("RESULT!!!!!!!!!", result)
-      } catch {
-        print("Decodable!!!!!!!!!", error)
-      }
-      
-      
-    }
+
+    setupUI()
+    setupConstraints()
   }
   
   deinit {
-    print("DEINIT: ", String(describing: self))
+    DLog(String(describing: self))
   }
+
+
+  //MARK:- Methods
+  func setupUI() { }
+
+  func setupConstraints() { }
   
 }
