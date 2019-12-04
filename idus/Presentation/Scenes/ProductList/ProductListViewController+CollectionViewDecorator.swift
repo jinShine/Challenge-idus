@@ -37,7 +37,29 @@ extension ProductListViewController: UICollectionViewDelegate {
   func collectionView(_ collectionView: UICollectionView,
                       willDisplay cell: UICollectionViewCell,
                       forItemAt indexPath: IndexPath) {
-    DLog(indexPath)
+
+    refreshFooterView?.startRefreshing()
+    viewModel.loadMore(at: indexPath) { [weak self] success in
+      self?.refreshFooterView?.endRefreshing()
+      if success {
+        self?.reload()
+        DLog(self?.viewModel.productList)
+      }
+    }
+
+  }
+
+  func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+
+    switch kind {
+    case UICollectionView.elementKindSectionHeader: return UICollectionReusableView()
+    case UICollectionView.elementKindSectionFooter:
+      let footer = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: RefreshFooterView.reuseIdentifier, for: indexPath) as! RefreshFooterView
+      refreshFooterView = footer
+      return footer
+    default:
+      fatalError("Unknow kind")
+    }
   }
 
 }

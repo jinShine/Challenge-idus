@@ -10,7 +10,7 @@ import Foundation
 
 protocol IdusUseCase {
 
-  func executeProductList(completion: @escaping (NetworkDataResponse) -> Void)
+  func executeProductList(page: Int, completion: @escaping (NetworkDataResponse) -> Void)
 }
 
 final class IdusUseCaseImpl: IdusUseCase {
@@ -21,8 +21,9 @@ final class IdusUseCaseImpl: IdusUseCase {
     self.idusRepository = idusRepository
   }
 
-  func executeProductList(completion: @escaping (NetworkDataResponse) -> Void) {
-    idusRepository.requestProductList(completion: completion)
+  func executeProductList(page: Int, completion: @escaping (NetworkDataResponse) -> Void) {
+    idusRepository.requestProductList(page: page, completion: completion)
+
   }
 
 }

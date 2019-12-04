@@ -10,7 +10,7 @@ import Moya
 
 enum IdusRouter {
   case productsList
-  case productsDetail(page: String)
+  case productsDetail(page: Int)
 }
 
 extension IdusRouter: TargetType {

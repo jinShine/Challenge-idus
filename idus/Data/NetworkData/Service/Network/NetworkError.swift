@@ -15,7 +15,7 @@ struct NetworkError {
   static func transform(jsonData: Data?) -> NetworkDataResponse {
 
     do {
-      let result = try JSONDecoder().decode(IdusErrorModel.self, from: jsonData!)
+      let result = try JSONDecoder().decode(IdusErrorModel.self, from: jsonData ?? Data())
       DLog(result)
       return NetworkDataResponse(model: nil,
                           result: .failure,

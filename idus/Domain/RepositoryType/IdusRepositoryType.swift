@@ -10,5 +10,5 @@ import Foundation
 
 protocol IdusRepositoryType {
 
-  func requestProductList(completion: @escaping (NetworkDataResponse) -> Void)
+  func requestProductList(page: Int, completion: @escaping (NetworkDataResponse) -> Void)
 }

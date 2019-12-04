@@ -28,18 +28,25 @@ final class ProductListViewController: BaseViewController {
 
 
   //MARK:- UI Properties
-  
+
+
+  var refreshFooterView: RefreshFooterView?
+
   lazy var collectionView: UICollectionView = {
     let layout = UICollectionViewFlowLayout()
+    layout.footerReferenceSize = CGSize(width: view.frame.width, height: 30)
     let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
     collectionView.backgroundColor = .white
     collectionView.dataSource = self
     collectionView.delegate = self
+//    collectionView.prefetchDataSource = self
     
     collectionView.register(ProductCell.classForCoder(), forCellWithReuseIdentifier: ProductCell.reuseIdentifier)
+    collectionView.register(RefreshFooterView.classForCoder(), forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: RefreshFooterView.reuseIdentifier)
     
     return collectionView
   }()
+  
   
 
   //MARK:- Properties
@@ -91,17 +98,23 @@ final class ProductListViewController: BaseViewController {
 
   private func bind() {
 
-    viewModel.productListUpdate { [weak self] response in
+    viewModel.productListUpdate(page: viewModel.pageCount) { [weak self] response in
       if response.result == .failure {
         DLog(response.error?.message)
+        //Alert 추가하기
+        self?.refreshFooterView?.endRefreshing()
         return
       }
 
-      DispatchQueue.main.async {
-        self?.collectionView.reloadData()
-      }
+      self?.reload()
     }
 
+  }
+
+  func reload() {
+    DispatchQueue.main.async {
+      self.collectionView.reloadData()
+    }
   }
   
 }

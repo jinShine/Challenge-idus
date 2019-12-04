@@ -46,6 +46,8 @@ struct NetworkService {
           completion(NetworkDataResponse(model: model, result: .success, error: nil))
         } catch {
           DLog("buildRequest Decodable Error")
+          let errorJsonData = response.value?.data
+          completion(NetworkError.transform(jsonData: errorJsonData))
         }
       case .failure:
         let errorJsonData = response.value?.data
