@@ -7,7 +7,83 @@
 //
 
 import UIKit
+import SnapKit
 
 class RefreshFooterView: UICollectionReusableView {
-        
+
+  //MARK:- Constant
+  
+  struct UI {
+    static let refreshControlSize: CGFloat = 20
+  }
+
+
+  //MARK:- UI Properties
+
+  let refreshControl: UIImageView = {
+    let imageView = UIImageView()
+    imageView.image = UIImage(named: "explore")
+    imageView.tintColor = App.color.blueGrey
+    return imageView
+  }()
+
+
+  //MARK:- UI Properties
+
+  var isRefreshing: Bool = false
+
+
+  //MARK:- Init
+  
+  override init(frame: CGRect) {
+    super.init(frame: frame)
+    setupUI()
+    setupConstraints()
+  }
+
+  required init?(coder: NSCoder) {
+    super.init(coder: coder)
+    setupUI()
+    setupConstraints()
+  }
+
+
+  //MARK:- Methods
+
+  private func setupUI() {
+    addSubview(refreshControl)
+  }
+
+  private func setupConstraints() {
+    refreshControl.snp.makeConstraints {
+      $0.center.equalToSuperview()
+      $0.size.equalTo(UI.refreshControlSize)
+    }
+  }
+
+  func startRefreshing() {
+    isRefreshing = true
+    refreshControl.isHidden = false
+    refreshControl.layer.add(refreshAnimation(), forKey: "refresh")
+  }
+
+  func endRefreshing() {
+    isRefreshing = false
+    refreshControl.isHidden = true
+    refreshControl.layer.removeAllAnimations()
+  }
+
+  private func refreshAnimation() -> CABasicAnimation {
+    let anim = CABasicAnimation(keyPath: "transform.rotation")
+    anim.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
+    anim.fromValue = 0
+    anim.toValue = 6 * Double.pi
+    anim.duration = 1.5
+    anim.repeatCount = HUGE
+    anim.isRemovedOnCompletion = false
+    anim.speed = 1
+
+    return anim
+  }
+
 }
