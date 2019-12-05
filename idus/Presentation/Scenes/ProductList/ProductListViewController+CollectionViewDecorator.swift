@@ -8,7 +8,7 @@
 
 import UIKit
 
-//MARK:- Collection view data source
+//MARK:- CollectionView data source
 
 extension ProductListViewController: UICollectionViewDataSource {
 
@@ -30,7 +30,7 @@ extension ProductListViewController: UICollectionViewDataSource {
 
 }
 
-//MARK:- Collection view delegate
+//MARK:- CollectionView delegate
 
 extension ProductListViewController: UICollectionViewDelegate {
 
@@ -38,9 +38,7 @@ extension ProductListViewController: UICollectionViewDelegate {
                       didSelectItemAt indexPath: IndexPath) {
 
     let id = viewModel.productList[indexPath.item].id
-    navigationController?.pushViewController(
-      navigator.navigate(at: .productDetail(id: id)
-    ), animated: true)
+    navigationController?.pushViewController(navigator.navigate(at: .productDetail(id: id)), animated: true)
 
   }
   
@@ -80,7 +78,7 @@ extension ProductListViewController: UICollectionViewDelegate {
 
 }
 
-//MARK:- Collection view flow layout
+//MARK:- CollectionView flow layout
 
 extension ProductListViewController: UICollectionViewDelegateFlowLayout {
 

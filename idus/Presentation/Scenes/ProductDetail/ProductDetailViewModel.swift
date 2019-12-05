@@ -12,9 +12,9 @@ final class ProductDetailViewModel {
 
   //MARK:- Cell Type
 
-//  enum CellType: Int {
-//    case product
-//  }
+  enum CellType: Int {
+    case thumbnail
+  }
 
 
   //MARK:- Properties

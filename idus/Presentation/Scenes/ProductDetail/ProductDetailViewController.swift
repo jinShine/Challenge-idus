@@ -13,6 +13,7 @@ final class ProductDetailViewController: BaseViewController {
   //MARK:- Constant
 
   struct UI {
+    
   }
 
 
@@ -20,8 +21,12 @@ final class ProductDetailViewController: BaseViewController {
 
   lazy var tableView: UITableView = {
     let tableView = UITableView()
-//    tableView.delegate = self
-//    tableView.dataSource = self
+    tableView.estimatedRowHeight = 80
+    tableView.rowHeight = UITableView.automaticDimension
+    tableView.delegate = self
+    tableView.dataSource = self
+    
+    tableView.register(ThumbnailCell.classForCoder(), forCellReuseIdentifier: ThumbnailCell.reuseIdentifier)
     return tableView
   }()
 
@@ -65,7 +70,7 @@ final class ProductDetailViewController: BaseViewController {
       $0.edges.equalToSuperview()
     }
   }
-
+  
   override func bind() {
     
   }

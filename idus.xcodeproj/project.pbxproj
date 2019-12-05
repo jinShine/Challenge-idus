@@ -41,6 +41,11 @@
 		5C1452042395705500441597 /* NetworkDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1452032395705500441597 /* NetworkDataResponse.swift */; };
 		5C1452062395707800441597 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1452052395707800441597 /* NetworkError.swift */; };
 		5C1452092395751A00441597 /* IdusErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1452082395751A00441597 /* IdusErrorModel.swift */; };
+		5C14520C2399644600441597 /* ThumbnailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C14520B2399644600441597 /* ThumbnailCell.swift */; };
+		5C14520E2399645C00441597 /* ThumbnailCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C14520D2399645C00441597 /* ThumbnailCellViewModel.swift */; };
+		5C145210239965F400441597 /* ProductDetailViewController+TableViewDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C14520F239965F400441597 /* ProductDetailViewController+TableViewDecorator.swift */; };
+		5C1452122399697900441597 /* TableViewDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1452112399697900441597 /* TableViewDecorator.swift */; };
+		5C14521423996B9B00441597 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C14521323996B9B00441597 /* BaseTableViewCell.swift */; };
 		5C681CF02395F4A8000189F2 /* ProductListViewController+CollectionViewDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C681CEF2395F4A8000189F2 /* ProductListViewController+CollectionViewDecorator.swift */; };
 		5C681CF22395F791000189F2 /* CollectionViewDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C681CF12395F791000189F2 /* CollectionViewDecorator.swift */; };
 		5CBCBE142396070C0098A60D /* ProductCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBCBE132396070C0098A60D /* ProductCellViewModel.swift */; };
@@ -115,6 +120,11 @@
 		5C1452032395705500441597 /* NetworkDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataResponse.swift; sourceTree = "<group>"; };
 		5C1452052395707800441597 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		5C1452082395751A00441597 /* IdusErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IdusErrorModel.swift; path = idus/Domain/Entity/IdusErrorModel.swift; sourceTree = SOURCE_ROOT; };
+		5C14520B2399644600441597 /* ThumbnailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ThumbnailCell.swift; path = idus/Presentation/ThumbnailCell.swift; sourceTree = SOURCE_ROOT; };
+		5C14520D2399645C00441597 /* ThumbnailCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ThumbnailCellViewModel.swift; path = idus/Presentation/Scenes/ThumbnailCellViewModel.swift; sourceTree = SOURCE_ROOT; };
+		5C14520F239965F400441597 /* ProductDetailViewController+TableViewDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductDetailViewController+TableViewDecorator.swift"; sourceTree = "<group>"; };
+		5C1452112399697900441597 /* TableViewDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TableViewDecorator.swift; path = idus/TableViewDecorator.swift; sourceTree = SOURCE_ROOT; };
+		5C14521323996B9B00441597 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseTableViewCell.swift; path = idus/Core/BaseTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		5C681CEF2395F4A8000189F2 /* ProductListViewController+CollectionViewDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductListViewController+CollectionViewDecorator.swift"; sourceTree = "<group>"; };
 		5C681CF12395F791000189F2 /* CollectionViewDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CollectionViewDecorator.swift; path = idus/Presentation/Scenes/ProductList/CollectionViewDecorator.swift; sourceTree = SOURCE_ROOT; };
 		5CBCBE132396070C0098A60D /* ProductCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellViewModel.swift; sourceTree = "<group>"; };
@@ -332,8 +342,10 @@
 				5C1451C823951D3600441597 /* BaseViewController.swift */,
 				5C1451D02395252000441597 /* BaseNavigationController.swift */,
 				5C1451D62395487000441597 /* BaseCollectionViewCell.swift */,
+				5C14521323996B9B00441597 /* BaseTableViewCell.swift */,
 				5C681CF12395F791000189F2 /* CollectionViewDecorator.swift */,
 				5CF88A8B23977F5100E03D2C /* RefreshFooterView.swift */,
+				5C1452112399697900441597 /* TableViewDecorator.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -424,6 +436,9 @@
 			children = (
 				5CF88A8F2398ECD700E03D2C /* ProductDetailViewController.swift */,
 				5CF88A922398ECEA00E03D2C /* ProductDetailViewModel.swift */,
+				5C14520F239965F400441597 /* ProductDetailViewController+TableViewDecorator.swift */,
+				5C14520B2399644600441597 /* ThumbnailCell.swift */,
+				5C14520D2399645C00441597 /* ThumbnailCellViewModel.swift */,
 			);
 			path = ProductDetail;
 			sourceTree = "<group>";
@@ -693,6 +708,7 @@
 				5C14520023956B6A00441597 /* IdusRouter.swift in Sources */,
 				5C1451F623955EAA00441597 /* App.swift in Sources */,
 				5C1451D923954C3F00441597 /* UIView+Additions.swift in Sources */,
+				5C14521423996B9B00441597 /* BaseTableViewCell.swift in Sources */,
 				5C1451D12395252000441597 /* BaseNavigationController.swift in Sources */,
 				5C1451CB23951FBC00441597 /* Navigator.swift in Sources */,
 				5C1451D72395487000441597 /* BaseCollectionViewCell.swift in Sources */,
@@ -706,10 +722,13 @@
 				5C1452092395751A00441597 /* IdusErrorModel.swift in Sources */,
 				5C1451CF2395211E00441597 /* ProductListViewModel.swift in Sources */,
 				5C1451CD2395211300441597 /* ProductListViewController.swift in Sources */,
+				5C14520E2399645C00441597 /* ThumbnailCellViewModel.swift in Sources */,
 				5C681CF02395F4A8000189F2 /* ProductListViewController+CollectionViewDecorator.swift in Sources */,
+				5C14520C2399644600441597 /* ThumbnailCell.swift in Sources */,
 				5CF88A902398ECD700E03D2C /* ProductDetailViewController.swift in Sources */,
 				5CFD688023961F53004E19E4 /* IdusRepositoryType.swift in Sources */,
 				5C1452042395705500441597 /* NetworkDataResponse.swift in Sources */,
+				5C145210239965F400441597 /* ProductDetailViewController+TableViewDecorator.swift in Sources */,
 				5C14520223956E7700441597 /* NetworkService.swift in Sources */,
 				5C1451F82395623200441597 /* Color.swift in Sources */,
 				5C1451F423955E9400441597 /* Font.swift in Sources */,
@@ -718,6 +737,7 @@
 				5C1451C923951D3600441597 /* BaseViewController.swift in Sources */,
 				5C1452062395707800441597 /* NetworkError.swift in Sources */,
 				5C1451D5239545E200441597 /* ProductCell.swift in Sources */,
+				5C1452122399697900441597 /* TableViewDecorator.swift in Sources */,
 				5CFD687D23961EC6004E19E4 /* IdusRepository.swift in Sources */,
 				5C14518C239515F300441597 /* AppDelegate.swift in Sources */,
 			);
