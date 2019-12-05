@@ -1,4 +1,4 @@
-//
+  //
 //  ProductListViewController+CollectionViewDecorator.swift
 //  idus
 //
@@ -11,6 +11,11 @@ import UIKit
 //MARK:- Collection view data source
 
 extension ProductListViewController: UICollectionViewDataSource {
+
+  func numberOfSections(in collectionView: UICollectionView) -> Int {
+
+    return viewModel.numberOfSections()
+  }
 
   func collectionView(_ collectionView: UICollectionView,
                       numberOfItemsInSection section: Int) -> Int {
@@ -31,6 +36,11 @@ extension ProductListViewController: UICollectionViewDelegate {
 
   func collectionView(_ collectionView: UICollectionView,
                       didSelectItemAt indexPath: IndexPath) {
+
+    let id = viewModel.productList[indexPath.item].id
+    navigationController?.pushViewController(
+      navigator.navigate(at: .productDetail(id: id)
+    ), animated: true)
 
   }
   

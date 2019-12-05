@@ -18,6 +18,12 @@ final class ProductDetailViewController: BaseViewController {
 
   //MARK:- UI Properties
 
+  lazy var tableView: UITableView = {
+    let tableView = UITableView()
+//    tableView.delegate = self
+//    tableView.dataSource = self
+    return tableView
+  }()
 
 
   //MARK:- Properties
@@ -42,7 +48,7 @@ final class ProductDetailViewController: BaseViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    bind()
+    
   }
 
 
@@ -50,14 +56,18 @@ final class ProductDetailViewController: BaseViewController {
 
   override func setupUI() {
 
+    [tableView].forEach { view.addSubview($0) }
+
   }
 
   override func setupConstraints() {
-
+    tableView.snp.makeConstraints {
+      $0.edges.equalToSuperview()
+    }
   }
 
-  private func bind() {
-
+  override func bind() {
+    
   }
 
 }

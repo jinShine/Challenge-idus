@@ -53,13 +53,15 @@ final class ProductListViewController: BaseViewController {
   //MARK:- Properties
   
   let viewModel: ProductListViewModel
+  let navigator: Navigator
   
   
   //MARK:- Init
   
-  init(viewModel: ProductListViewModel) {
+  init(viewModel: ProductListViewModel, navigator: Navigator) {
     self.viewModel = viewModel
-    
+    self.navigator = navigator
+
     super.init()
   }
   
@@ -72,7 +74,6 @@ final class ProductListViewController: BaseViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    bind()
   }
   
   
@@ -94,7 +95,7 @@ final class ProductListViewController: BaseViewController {
     }
   }
 
-  private func bind() {
+  override func bind() {
     fetchProductList()
   }
 

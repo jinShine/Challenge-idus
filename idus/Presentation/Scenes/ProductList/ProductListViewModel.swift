@@ -52,8 +52,15 @@ final class ProductListViewModel {
     }
   }
 
+  //MARK: - data source
+
+  func numberOfSections() -> Int {
+    return 1
+  }
+
   func numberOfItemsInSection() -> Int {
     return productList.count
   }
+
 
 }

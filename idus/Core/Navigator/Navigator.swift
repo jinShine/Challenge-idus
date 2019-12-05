@@ -8,22 +8,22 @@
 
 import UIKit
 
-enum Navigator {
-  case productList
-  case productDetail(id: Int)
-}
+struct Navigator {
 
-extension Navigator {
-  
-  var navigate: UIViewController {
-    switch self {
+  enum Scene {
+    case productList
+    case productDetail(id: Int)
+  }
+
+  func navigate(at scene: Scene) -> UIViewController {
+    switch scene {
     case .productList:
       let viewModel = ProductListViewModel(
         idusUseCase: IdusUseCaseImpl(
           idusRepository: IdusRepository()
         )
       )
-      let viewController = ProductListViewController(viewModel: viewModel)
+      let viewController = ProductListViewController(viewModel: viewModel, navigator: self)
       let navigationController = BaseNavigationController(rootViewController: viewController)
 
       return navigationController
@@ -40,4 +40,5 @@ extension Navigator {
       return viewController
     }
   }
+
 }
