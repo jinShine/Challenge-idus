@@ -38,24 +38,30 @@ extension ProductListViewController: UICollectionViewDelegate {
                       willDisplay cell: UICollectionViewCell,
                       forItemAt indexPath: IndexPath) {
 
-    refreshFooterView?.startRefreshing()
-    viewModel.loadMore(at: indexPath) { [weak self] success in
-      self?.refreshFooterView?.endRefreshing()
-      if success {
-        self?.reload()
-        DLog(self?.viewModel.productList)
+    viewModel.loadMore(at: indexPath) { [weak self] response in
+      if response.result == .failure {
+        DLog(response.error?.message)
+        self?.refreshFooterView?.endRefreshing()
+        return
       }
+
+      self?.refreshFooterView?.endRefreshing()
+      self?.reload()
     }
 
   }
 
-  func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+  func collectionView(_ collectionView: UICollectionView,
+                      viewForSupplementaryElementOfKind kind: String,
+                      at indexPath: IndexPath) -> UICollectionReusableView {
 
     switch kind {
     case UICollectionView.elementKindSectionHeader: return UICollectionReusableView()
     case UICollectionView.elementKindSectionFooter:
-      let footer = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: RefreshFooterView.reuseIdentifier, for: indexPath) as! RefreshFooterView
+      let footer = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter,
+        withReuseIdentifier: RefreshFooterView.reuseIdentifier, for: indexPath) as! RefreshFooterView
       refreshFooterView = footer
+
       return footer
     default:
       fatalError("Unknow kind")
@@ -76,12 +82,14 @@ extension ProductListViewController: UICollectionViewDelegateFlowLayout {
       - (UI.CollectionView.inset.left)
       - (UI.CollectionView.itemSpacing / UI.CollectionView.column)
 
-    let calculatedHeight = calculatedWidth + UI.maxTitleHeight + UI.maxSellerHeight + 4
+    let calculatedHeight = calculatedWidth + UI.maxTitleHeight + UI.maxSellerHeight + UI.titleTopMargin
 
     return CGSize(width: calculatedWidth , height: calculatedHeight)
   }
 
-  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+  func collectionView(_ collectionView: UICollectionView,
+                      layout collectionViewLayout: UICollectionViewLayout,
+                      insetForSectionAt section: Int) -> UIEdgeInsets {
 
     return UI.CollectionView.inset
   }
@@ -115,7 +123,6 @@ extension ProductListViewController: CollectionViewDecorator {
                                                           for: indexPath) as? ProductCell else {
         return UICollectionViewCell()
       }
-
       cell.viewModel = ProductCellViewModel(content: viewModel.productList[indexPath.row])
 
       return cell

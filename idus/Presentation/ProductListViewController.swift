@@ -17,6 +17,7 @@ final class ProductListViewController: BaseViewController {
 
     static let maxTitleHeight: CGFloat = 40
     static let maxSellerHeight: CGFloat = 20
+    static let titleTopMargin: CGFloat = 4
 
     struct CollectionView {
       static let inset: UIEdgeInsets = UIEdgeInsets(top: 24, left: 12, bottom: 24, right: 12)
@@ -39,10 +40,11 @@ final class ProductListViewController: BaseViewController {
     collectionView.backgroundColor = .white
     collectionView.dataSource = self
     collectionView.delegate = self
-//    collectionView.prefetchDataSource = self
     
     collectionView.register(ProductCell.classForCoder(), forCellWithReuseIdentifier: ProductCell.reuseIdentifier)
-    collectionView.register(RefreshFooterView.classForCoder(), forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: RefreshFooterView.reuseIdentifier)
+    collectionView.register(RefreshFooterView.classForCoder(),
+                            forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter,
+                            withReuseIdentifier: RefreshFooterView.reuseIdentifier)
     
     return collectionView
   }()
@@ -71,7 +73,6 @@ final class ProductListViewController: BaseViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-
     bind()
   }
   
@@ -89,20 +90,20 @@ final class ProductListViewController: BaseViewController {
   }
   
   override func setupConstraints() {
-    
     collectionView.snp.makeConstraints {
       $0.edges.equalToSuperview()
     }
-
   }
 
   private func bind() {
+    fetchProductList()
+  }
 
-    viewModel.productListUpdate(page: viewModel.pageCount) { [weak self] response in
+  private func fetchProductList() {
+
+    viewModel.updateProductList(page: viewModel.pageCount) { [weak self] response in
       if response.result == .failure {
         DLog(response.error?.message)
-        //Alert 추가하기
-        self?.refreshFooterView?.endRefreshing()
         return
       }
 
@@ -112,8 +113,9 @@ final class ProductListViewController: BaseViewController {
   }
 
   func reload() {
-    DispatchQueue.main.async {
-      self.collectionView.reloadData()
+    self.refreshFooterView?.startRefreshing()
+    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
+      self?.collectionView.reloadData()
     }
   }
   

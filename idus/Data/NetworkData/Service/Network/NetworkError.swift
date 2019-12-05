@@ -17,12 +17,12 @@ struct NetworkError {
     do {
       let result = try JSONDecoder().decode(IdusErrorModel.self, from: jsonData ?? Data())
       DLog(result)
-      return NetworkDataResponse(model: nil,
+      return NetworkDataResponse(json: nil,
                           result: .failure,
                           error: NetworkError(statusCode: result.statusCode, message: result.body))
     } catch {
       DLog("NetworkError Decodable Error")
-      return NetworkDataResponse(model: nil, result: .failure, error: nil)
+      return NetworkDataResponse(json: nil, result: .failure, error: nil)
     }
 
   }

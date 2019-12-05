@@ -18,10 +18,10 @@ final class ProductListViewModel {
 
 
   //MARK:- Properties
-  
+
   private let idusUseCase: IdusUseCase
   var productList: [Content] = []
-  var pageCount: Int = 20
+  var pageCount: Int = 1
 
 
   //MARK:- Init
@@ -32,14 +32,23 @@ final class ProductListViewModel {
 
 
   //MARK:- Methods
-  
-  func productListUpdate(page: Int, completion: @escaping (NetworkDataResponse) -> Void) {
+
+  func updateProductList(page: Int, completion: @escaping (NetworkDataResponse) -> Void) {
     idusUseCase.executeProductList(page: page) { [weak self] response in
-      guard let model = response.model as? ProductModel else {
-        return completion(response)
+      guard let model = response.json as? ProductModel else {
+        completion(response)
+        return
       }
+
       model.body.forEach { self?.productList.append($0) }
       completion(response)
+    }
+  }
+
+  func loadMore(at indexPath: IndexPath, completion: @escaping (NetworkDataResponse) -> Void) {
+    if indexPath.item == productList.count - 1 {
+      pageCount += 1
+      updateProductList(page: pageCount, completion: completion)
     }
   }
 
@@ -47,19 +56,4 @@ final class ProductListViewModel {
     return productList.count
   }
 
-  func loadMore(at indexPath: IndexPath, completion: @escaping (Bool) -> Void) {
-    if indexPath.item == productList.count - 1 {
-      pageCount += 1
-      productListUpdate(page: pageCount) { [weak self] response in
-        guard let product = response.model as? ProductModel else {
-          return completion(false)
-        }
-
-        product.body.forEach {
-          self?.productList.append($0)
-        }
-        completion(true)
-      }
-    }
-  }
 }

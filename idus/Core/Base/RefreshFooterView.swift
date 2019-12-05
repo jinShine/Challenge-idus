@@ -39,12 +39,18 @@ class RefreshFooterView: UICollectionReusableView {
     super.init(frame: frame)
     setupUI()
     setupConstraints()
+    startRefreshing()
   }
 
   required init?(coder: NSCoder) {
     super.init(coder: coder)
     setupUI()
     setupConstraints()
+    startRefreshing()
+  }
+
+  deinit {
+    refreshControl.layer.removeAllAnimations()
   }
 
 
@@ -52,6 +58,7 @@ class RefreshFooterView: UICollectionReusableView {
 
   private func setupUI() {
     addSubview(refreshControl)
+    refreshControl.layer.add(refreshAnimation(), forKey: "refresh")
   }
 
   private func setupConstraints() {
@@ -64,13 +71,11 @@ class RefreshFooterView: UICollectionReusableView {
   func startRefreshing() {
     isRefreshing = true
     refreshControl.isHidden = false
-    refreshControl.layer.add(refreshAnimation(), forKey: "refresh")
   }
 
   func endRefreshing() {
     isRefreshing = false
     refreshControl.isHidden = true
-    refreshControl.layer.removeAllAnimations()
   }
 
   private func refreshAnimation() -> CABasicAnimation {

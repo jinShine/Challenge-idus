@@ -23,7 +23,6 @@ final class IdusUseCaseImpl: IdusUseCase {
 
   func executeProductList(page: Int, completion: @escaping (NetworkDataResponse) -> Void) {
     idusRepository.requestProductList(page: page, completion: completion)
-
   }
 
 }
