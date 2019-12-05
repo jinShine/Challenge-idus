@@ -25,9 +25,9 @@ class BaseViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-
     setupUI()
     setupConstraints()
+    bind()
   }
   
   deinit {
@@ -40,5 +40,7 @@ class BaseViewController: UIViewController {
   func setupUI() { }
 
   func setupConstraints() { }
+
+  func bind() { }
   
 }
