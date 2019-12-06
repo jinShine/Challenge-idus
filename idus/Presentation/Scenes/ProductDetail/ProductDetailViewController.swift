@@ -26,7 +26,9 @@ final class ProductDetailViewController: BaseViewController {
     tableView.delegate = self
     tableView.dataSource = self
     
-    tableView.register(ThumbnailCell.classForCoder(), forCellReuseIdentifier: ThumbnailCell.reuseIdentifier)
+    tableView.register(ThumbnailCollectionViewCell.classForCoder(),
+                       forCellReuseIdentifier: ThumbnailCollectionViewCell.reuseIdentifier)
+
     return tableView
   }()
 
@@ -53,13 +55,13 @@ final class ProductDetailViewController: BaseViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    
   }
 
 
   //MARK:- Methods
 
   override func setupUI() {
+    self.navigationController?.setNavigationBarHidden(true, animated: false)
 
     [tableView].forEach { view.addSubview($0) }
 
@@ -72,7 +74,22 @@ final class ProductDetailViewController: BaseViewController {
   }
   
   override func bind() {
-    
+
+    viewModel.fetchProductDetail { [weak self] response in
+      if response.result == .failure {
+        DLog(response.error?.message)
+        return
+      }
+
+      self?.reload()
+    }
+
+  }
+
+  func reload() {
+    DispatchQueue.main.async { [weak self] in
+      self?.tableView.reloadData()
+    }
   }
 
 }

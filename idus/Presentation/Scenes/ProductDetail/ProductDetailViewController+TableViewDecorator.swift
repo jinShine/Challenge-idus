@@ -13,7 +13,7 @@ import UIKit
 extension ProductDetailViewController: UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 1
+    return 3
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -28,7 +28,7 @@ extension ProductDetailViewController: UITableViewDelegate {
   
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     switch ProductDetailViewModel.CellType(rawValue: indexPath.row) {
-    case .thumbnail:
+    case .thumbnailList:
       return tableView.frame.width
     default:
       return .zero
@@ -43,11 +43,13 @@ extension ProductDetailViewController: TableViewViewDecorator {
   
   func configureCell(tableView: UITableView, indexPath: IndexPath) -> UITableViewCell {
     switch ProductDetailViewModel.CellType(rawValue: indexPath.row) {
-    case .thumbnail:
-      guard let cell = tableView.dequeueReusableCell(withIdentifier: ThumbnailCell.reuseIdentifier, for: indexPath) as? ThumbnailCell else {
+    case .thumbnailList:
+      guard let cell = tableView.dequeueReusableCell(
+        withIdentifier: ThumbnailCollectionViewCell.reuseIdentifier, for: indexPath) as? ThumbnailCollectionViewCell else {
         return UITableViewCell()
       }
-      
+      let thumbnailList = viewModel.thumbnailList
+      cell.viewModel = ThumbnailCollectionViewCellViewModel(thumbnailList: thumbnailList)
       
       return cell
       

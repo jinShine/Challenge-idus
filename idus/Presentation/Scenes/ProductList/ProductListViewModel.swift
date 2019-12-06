@@ -20,7 +20,7 @@ final class ProductListViewModel {
   //MARK:- Properties
 
   private let idusUseCase: IdusUseCase
-  var productList: [Content] = []
+  var productList: [ProductContent] = []
   var pageCount: Int = 1
 
 

@@ -24,10 +24,10 @@ import Foundation
 
 struct ProductModel: Decodable {
   var statusCode: Int
-  var body: [Content]
+  var body: [ProductContent]
 }
 
-struct Content: Decodable {
+struct ProductContent: Decodable {
   var id: Int
   var thumbnail: String
   var seller: String

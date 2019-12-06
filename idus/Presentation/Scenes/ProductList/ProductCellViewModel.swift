@@ -15,7 +15,7 @@ class ProductCellViewModel {
   var title: String
   var seller: String
 
-  init(content: Content) {
+  init(content: ProductContent) {
     self.id = content.id
     self.title = content.title
     self.seller = content.seller

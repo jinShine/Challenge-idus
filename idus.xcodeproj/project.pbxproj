@@ -41,8 +41,8 @@
 		5C1452042395705500441597 /* NetworkDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1452032395705500441597 /* NetworkDataResponse.swift */; };
 		5C1452062395707800441597 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1452052395707800441597 /* NetworkError.swift */; };
 		5C1452092395751A00441597 /* IdusErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1452082395751A00441597 /* IdusErrorModel.swift */; };
-		5C14520C2399644600441597 /* ThumbnailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C14520B2399644600441597 /* ThumbnailCell.swift */; };
-		5C14520E2399645C00441597 /* ThumbnailCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C14520D2399645C00441597 /* ThumbnailCellViewModel.swift */; };
+		5C14520C2399644600441597 /* ThumbnailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C14520B2399644600441597 /* ThumbnailCollectionViewCell.swift */; };
+		5C14520E2399645C00441597 /* ThumbnailCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C14520D2399645C00441597 /* ThumbnailCollectionViewCellViewModel.swift */; };
 		5C145210239965F400441597 /* ProductDetailViewController+TableViewDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C14520F239965F400441597 /* ProductDetailViewController+TableViewDecorator.swift */; };
 		5C1452122399697900441597 /* TableViewDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1452112399697900441597 /* TableViewDecorator.swift */; };
 		5C14521423996B9B00441597 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C14521323996B9B00441597 /* BaseTableViewCell.swift */; };
@@ -53,6 +53,10 @@
 		5CF88A8C23977F5100E03D2C /* RefreshFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF88A8B23977F5100E03D2C /* RefreshFooterView.swift */; };
 		5CF88A902398ECD700E03D2C /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF88A8F2398ECD700E03D2C /* ProductDetailViewController.swift */; };
 		5CF88A932398ECEA00E03D2C /* ProductDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF88A922398ECEA00E03D2C /* ProductDetailViewModel.swift */; };
+		5CF88A952399EC5100E03D2C /* ThumbnailCollectionViewCell+CollectionViewDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF88A942399EC5100E03D2C /* ThumbnailCollectionViewCell+CollectionViewDecorator.swift */; };
+		5CF88A972399F1B400E03D2C /* ThumbnailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF88A962399F1B400E03D2C /* ThumbnailCell.swift */; };
+		5CF88A992399F98100E03D2C /* ThumbnailCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF88A982399F98100E03D2C /* ThumbnailCellViewModel.swift */; };
+		5CF88A9B239A0C2B00E03D2C /* ProductDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF88A9A239A0C2B00E03D2C /* ProductDetailModel.swift */; };
 		5CFD687A23961DDF004E19E4 /* IdusUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFD687923961DDF004E19E4 /* IdusUseCase.swift */; };
 		5CFD687D23961EC6004E19E4 /* IdusRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFD687C23961EC6004E19E4 /* IdusRepository.swift */; };
 		5CFD688023961F53004E19E4 /* IdusRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFD687F23961F53004E19E4 /* IdusRepositoryType.swift */; };
@@ -120,8 +124,8 @@
 		5C1452032395705500441597 /* NetworkDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataResponse.swift; sourceTree = "<group>"; };
 		5C1452052395707800441597 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		5C1452082395751A00441597 /* IdusErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IdusErrorModel.swift; path = idus/Domain/Entity/IdusErrorModel.swift; sourceTree = SOURCE_ROOT; };
-		5C14520B2399644600441597 /* ThumbnailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ThumbnailCell.swift; path = idus/Presentation/ThumbnailCell.swift; sourceTree = SOURCE_ROOT; };
-		5C14520D2399645C00441597 /* ThumbnailCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ThumbnailCellViewModel.swift; path = idus/Presentation/Scenes/ThumbnailCellViewModel.swift; sourceTree = SOURCE_ROOT; };
+		5C14520B2399644600441597 /* ThumbnailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ThumbnailCollectionViewCell.swift; path = idus/Presentation/ThumbnailCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
+		5C14520D2399645C00441597 /* ThumbnailCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ThumbnailCollectionViewCellViewModel.swift; path = idus/Presentation/Scenes/ThumbnailCollectionViewCellViewModel.swift; sourceTree = SOURCE_ROOT; };
 		5C14520F239965F400441597 /* ProductDetailViewController+TableViewDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductDetailViewController+TableViewDecorator.swift"; sourceTree = "<group>"; };
 		5C1452112399697900441597 /* TableViewDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TableViewDecorator.swift; path = idus/TableViewDecorator.swift; sourceTree = SOURCE_ROOT; };
 		5C14521323996B9B00441597 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseTableViewCell.swift; path = idus/Core/BaseTableViewCell.swift; sourceTree = SOURCE_ROOT; };
@@ -133,6 +137,10 @@
 		5CF88A8B23977F5100E03D2C /* RefreshFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshFooterView.swift; sourceTree = "<group>"; };
 		5CF88A8F2398ECD700E03D2C /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		5CF88A922398ECEA00E03D2C /* ProductDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewModel.swift; sourceTree = "<group>"; };
+		5CF88A942399EC5100E03D2C /* ThumbnailCollectionViewCell+CollectionViewDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ThumbnailCollectionViewCell+CollectionViewDecorator.swift"; sourceTree = "<group>"; };
+		5CF88A962399F1B400E03D2C /* ThumbnailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailCell.swift; sourceTree = "<group>"; };
+		5CF88A982399F98100E03D2C /* ThumbnailCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailCellViewModel.swift; sourceTree = "<group>"; };
+		5CF88A9A239A0C2B00E03D2C /* ProductDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailModel.swift; sourceTree = "<group>"; };
 		5CFD687923961DDF004E19E4 /* IdusUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdusUseCase.swift; sourceTree = "<group>"; };
 		5CFD687C23961EC6004E19E4 /* IdusRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdusRepository.swift; sourceTree = "<group>"; };
 		5CFD687F23961F53004E19E4 /* IdusRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdusRepositoryType.swift; sourceTree = "<group>"; };
@@ -425,8 +433,9 @@
 		5CBCBE17239608B10098A60D /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				5CBCBE18239608DA0098A60D /* ProductModel.swift */,
 				5C1452082395751A00441597 /* IdusErrorModel.swift */,
+				5CBCBE18239608DA0098A60D /* ProductModel.swift */,
+				5CF88A9A239A0C2B00E03D2C /* ProductDetailModel.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -437,8 +446,11 @@
 				5CF88A8F2398ECD700E03D2C /* ProductDetailViewController.swift */,
 				5CF88A922398ECEA00E03D2C /* ProductDetailViewModel.swift */,
 				5C14520F239965F400441597 /* ProductDetailViewController+TableViewDecorator.swift */,
-				5C14520B2399644600441597 /* ThumbnailCell.swift */,
-				5C14520D2399645C00441597 /* ThumbnailCellViewModel.swift */,
+				5C14520B2399644600441597 /* ThumbnailCollectionViewCell.swift */,
+				5C14520D2399645C00441597 /* ThumbnailCollectionViewCellViewModel.swift */,
+				5CF88A942399EC5100E03D2C /* ThumbnailCollectionViewCell+CollectionViewDecorator.swift */,
+				5CF88A962399F1B400E03D2C /* ThumbnailCell.swift */,
+				5CF88A982399F98100E03D2C /* ThumbnailCellViewModel.swift */,
 			);
 			path = ProductDetail;
 			sourceTree = "<group>";
@@ -704,6 +716,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CF88A9B239A0C2B00E03D2C /* ProductDetailModel.swift in Sources */,
+				5CF88A972399F1B400E03D2C /* ThumbnailCell.swift in Sources */,
 				5CBCBE142396070C0098A60D /* ProductCellViewModel.swift in Sources */,
 				5C14520023956B6A00441597 /* IdusRouter.swift in Sources */,
 				5C1451F623955EAA00441597 /* App.swift in Sources */,
@@ -722,9 +736,9 @@
 				5C1452092395751A00441597 /* IdusErrorModel.swift in Sources */,
 				5C1451CF2395211E00441597 /* ProductListViewModel.swift in Sources */,
 				5C1451CD2395211300441597 /* ProductListViewController.swift in Sources */,
-				5C14520E2399645C00441597 /* ThumbnailCellViewModel.swift in Sources */,
+				5C14520E2399645C00441597 /* ThumbnailCollectionViewCellViewModel.swift in Sources */,
 				5C681CF02395F4A8000189F2 /* ProductListViewController+CollectionViewDecorator.swift in Sources */,
-				5C14520C2399644600441597 /* ThumbnailCell.swift in Sources */,
+				5C14520C2399644600441597 /* ThumbnailCollectionViewCell.swift in Sources */,
 				5CF88A902398ECD700E03D2C /* ProductDetailViewController.swift in Sources */,
 				5CFD688023961F53004E19E4 /* IdusRepositoryType.swift in Sources */,
 				5C1452042395705500441597 /* NetworkDataResponse.swift in Sources */,
@@ -735,11 +749,13 @@
 				5CFD687A23961DDF004E19E4 /* IdusUseCase.swift in Sources */,
 				5CBCBE19239608DA0098A60D /* ProductModel.swift in Sources */,
 				5C1451C923951D3600441597 /* BaseViewController.swift in Sources */,
+				5CF88A952399EC5100E03D2C /* ThumbnailCollectionViewCell+CollectionViewDecorator.swift in Sources */,
 				5C1452062395707800441597 /* NetworkError.swift in Sources */,
 				5C1451D5239545E200441597 /* ProductCell.swift in Sources */,
 				5C1452122399697900441597 /* TableViewDecorator.swift in Sources */,
 				5CFD687D23961EC6004E19E4 /* IdusRepository.swift in Sources */,
 				5C14518C239515F300441597 /* AppDelegate.swift in Sources */,
+				5CF88A992399F98100E03D2C /* ThumbnailCellViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

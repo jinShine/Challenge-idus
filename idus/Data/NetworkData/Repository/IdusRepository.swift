@@ -21,6 +21,10 @@ final class IdusRepository {
 extension IdusRepository: IdusRepositoryType {
 
   func requestProductList(page: Int, completion: @escaping (NetworkDataResponse) -> Void) {
-    networkService.buildRequest(to: .productsDetail(page: page), decoder: ProductModel.self, completion: completion)
+    networkService.buildRequest(to: .productList(page: page), decoder: ProductModel.self, completion: completion)
+  }
+
+  func requestProductDetail(id: Int, completion: @escaping (NetworkDataResponse) -> Void) {
+    networkService.buildRequest(to: .productDetail(id: id), decoder: ProductDetailModel.self, completion: completion)
   }
 }

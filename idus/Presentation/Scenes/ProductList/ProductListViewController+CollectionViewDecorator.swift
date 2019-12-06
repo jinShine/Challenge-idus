@@ -127,8 +127,8 @@ extension ProductListViewController: CollectionViewDecorator {
 
     switch ProductListViewModel.CellType(rawValue: indexPath.section) {
     case .product:
-      guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductCell.reuseIdentifier,
-                                                          for: indexPath) as? ProductCell else {
+      guard let cell = collectionView.dequeueReusableCell(
+        withReuseIdentifier: ProductCell.reuseIdentifier, for: indexPath) as? ProductCell else {
         return UICollectionViewCell()
       }
       cell.viewModel = ProductCellViewModel(content: viewModel.productList[indexPath.row])

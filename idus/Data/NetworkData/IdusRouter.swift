@@ -9,8 +9,8 @@
 import Moya
 
 enum IdusRouter {
-  case productsList
-  case productsDetail(page: Int)
+  case productList(page: Int)
+  case productDetail(id: Int)
 }
 
 extension IdusRouter: TargetType {
@@ -21,16 +21,16 @@ extension IdusRouter: TargetType {
   
   var path: String {
     switch self {
-    case .productsList:
+    case .productList:
       return "/products"
-    case .productsDetail:
-      return "/products"
+    case .productDetail(let id):
+      return "/products/\(id)"
     }
   }
   
   var method: Moya.Method {
     switch self {
-    case .productsList, .productsDetail:
+    case .productList, .productDetail:
       return .get
     }
   }
@@ -41,10 +41,10 @@ extension IdusRouter: TargetType {
   
   var task: Task {
     switch self {
-    case .productsList:
-      return .requestParameters(parameters: [:], encoding: URLEncoding.queryString)
-    case .productsDetail(let page):
+    case .productList(let page):
       return .requestParameters(parameters: ["page" : page], encoding: URLEncoding.queryString)
+    case .productDetail:
+      return .requestPlain
     }
   }
   
