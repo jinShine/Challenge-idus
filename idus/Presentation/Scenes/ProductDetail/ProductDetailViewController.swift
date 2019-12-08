@@ -13,8 +13,20 @@ final class ProductDetailViewController: BaseViewController {
   //MARK:- Constant
 
   struct UI {
-    static let dismissButtonSize: CGFloat = 40
-    static let dismissButtonMargin: CGFloat = 16
+    struct DismissButton {
+      static let size: CGFloat = 40
+      static let margin: CGFloat = 16
+    }
+    struct TableView {
+      static let estimateRowHeight: CGFloat = 100
+    }
+    struct PurchaseButton {
+      static let cornerRadius: CGFloat = 14
+      static let bottomMargin: CGFloat = -30
+      static let leadingMargin: CGFloat = 24
+      static let trailingMargin: CGFloat = -24
+      static let height: CGFloat = 52
+    }
   }
 
 
@@ -25,7 +37,7 @@ final class ProductDetailViewController: BaseViewController {
     button.setImage(UIImage(named: "dismiss"), for: .normal)
     button.imageView?.contentMode = .scaleAspectFit
     button.backgroundColor = App.color.darkAlpha
-    button.layer.cornerRadius = UI.dismissButtonSize / 2
+    button.layer.cornerRadius = UI.DismissButton.size / 2
     button.layer.masksToBounds = true
     button.addTarget(self, action: #selector(didTapDismissAction), for: .touchUpInside)
     return button
@@ -33,7 +45,7 @@ final class ProductDetailViewController: BaseViewController {
   
   lazy var tableView: UITableView = {
     let tableView = UITableView()
-    tableView.estimatedRowHeight = 80
+    tableView.estimatedRowHeight = UI.TableView.estimateRowHeight
     tableView.rowHeight = UITableView.automaticDimension
     tableView.delegate = self
     tableView.dataSource = self
@@ -42,6 +54,18 @@ final class ProductDetailViewController: BaseViewController {
                        forCellReuseIdentifier: ThumbnailCollectionViewCell.reuseIdentifier)
 
     return tableView
+  }()
+  
+  let purchaseButton: UIButton = {
+    let button = UIButton()
+    button.setTitle("구매하기", for: .normal)
+    button.setTitleColor(.white, for: .normal)
+    button.titleLabel?.font = App.font.notoSansBlack(size: 18)
+    button.titleLabel?.textAlignment = .center
+    button.backgroundColor = App.color.coralPink
+    button.layer.cornerRadius = UI.PurchaseButton.cornerRadius
+    button.layer.masksToBounds = true
+    return button
   }()
 
 
@@ -75,20 +99,27 @@ final class ProductDetailViewController: BaseViewController {
   override func setupUI() {
     self.navigationController?.setNavigationBarHidden(true, animated: false)
 
-    [tableView, dismissButton].forEach { view.addSubview($0) }
+    [tableView, dismissButton, purchaseButton].forEach { view.addSubview($0) }
 
   }
 
   override func setupConstraints() {
     
     dismissButton.snp.makeConstraints {
-      $0.top.equalToSuperview().offset(UI.dismissButtonMargin)
-      $0.trailing.equalToSuperview().offset(-UI.dismissButtonMargin)
-      $0.size.equalTo(UI.dismissButtonSize)
+      $0.top.equalToSuperview().offset(UI.DismissButton.margin)
+      $0.trailing.equalToSuperview().offset(-UI.DismissButton.margin)
+      $0.size.equalTo(UI.DismissButton.size)
     }
     
     tableView.snp.makeConstraints {
       $0.edges.equalToSuperview()
+    }
+    
+    purchaseButton.snp.makeConstraints {
+      $0.bottom.equalToSuperview().offset(UI.PurchaseButton.bottomMargin)
+      $0.leading.equalToSuperview().offset(UI.PurchaseButton.leadingMargin)
+      $0.trailing.equalToSuperview().offset(UI.PurchaseButton.trailingMargin)
+      $0.height.equalTo(UI.PurchaseButton.height)
     }
   }
   

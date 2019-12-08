@@ -34,4 +34,8 @@ struct Color {
     return UIColor(r: 0, g: 0, b: 10, a: 0.36)
   }
   
+  var coralPink: UIColor {
+    return UIColor(r: 255, g: 88, b: 108)
+  }
+  
 }
