@@ -46,10 +46,19 @@
 		5C145210239965F400441597 /* ProductDetailViewController+TableViewDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C14520F239965F400441597 /* ProductDetailViewController+TableViewDecorator.swift */; };
 		5C1452122399697900441597 /* TableViewDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1452112399697900441597 /* TableViewDecorator.swift */; };
 		5C14521423996B9B00441597 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C14521323996B9B00441597 /* BaseTableViewCell.swift */; };
+		5C145216239D5C8B00441597 /* InfomationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C145215239D5C8B00441597 /* InfomationCell.swift */; };
+		5C145218239D5CA400441597 /* InfomationCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C145217239D5CA400441597 /* InfomationCellViewModel.swift */; };
+		5C14521A239D5F0400441597 /* UILabel+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C145219239D5F0400441597 /* UILabel+Additions.swift */; };
 		5C681CF02395F4A8000189F2 /* ProductListViewController+CollectionViewDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C681CEF2395F4A8000189F2 /* ProductListViewController+CollectionViewDecorator.swift */; };
 		5C681CF22395F791000189F2 /* CollectionViewDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C681CF12395F791000189F2 /* CollectionViewDecorator.swift */; };
 		5CBCBE142396070C0098A60D /* ProductCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBCBE132396070C0098A60D /* ProductCellViewModel.swift */; };
 		5CBCBE19239608DA0098A60D /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBCBE18239608DA0098A60D /* ProductModel.swift */; };
+		5CDECF02239D660F00109136 /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5CDECEFC239D660A00109136 /* SF-Pro-Text-Bold.otf */; };
+		5CDECF03239D661200109136 /* SF-Pro-Text-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5CDECF00239D660B00109136 /* SF-Pro-Text-Heavy.otf */; };
+		5CDECF04239D661400109136 /* SF-Pro-Text-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5CDECF01239D660B00109136 /* SF-Pro-Text-Light.otf */; };
+		5CDECF05239D661600109136 /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5CDECEFE239D660A00109136 /* SF-Pro-Text-Medium.otf */; };
+		5CDECF06239D661800109136 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5CDECEFD239D660A00109136 /* SF-Pro-Text-Regular.otf */; };
+		5CDECF07239D661A00109136 /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5CDECEFF239D660B00109136 /* SF-Pro-Text-Semibold.otf */; };
 		5CF88A8C23977F5100E03D2C /* RefreshFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF88A8B23977F5100E03D2C /* RefreshFooterView.swift */; };
 		5CF88A902398ECD700E03D2C /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF88A8F2398ECD700E03D2C /* ProductDetailViewController.swift */; };
 		5CF88A932398ECEA00E03D2C /* ProductDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF88A922398ECEA00E03D2C /* ProductDetailViewModel.swift */; };
@@ -129,10 +138,19 @@
 		5C14520F239965F400441597 /* ProductDetailViewController+TableViewDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductDetailViewController+TableViewDecorator.swift"; sourceTree = "<group>"; };
 		5C1452112399697900441597 /* TableViewDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TableViewDecorator.swift; path = idus/TableViewDecorator.swift; sourceTree = SOURCE_ROOT; };
 		5C14521323996B9B00441597 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseTableViewCell.swift; path = idus/Core/BaseTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		5C145215239D5C8B00441597 /* InfomationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfomationCell.swift; sourceTree = "<group>"; };
+		5C145217239D5CA400441597 /* InfomationCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InfomationCellViewModel.swift; path = idus/Presentation/InfomationCellViewModel.swift; sourceTree = SOURCE_ROOT; };
+		5C145219239D5F0400441597 /* UILabel+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UILabel+Additions.swift"; path = "idus/UILabel+Additions.swift"; sourceTree = SOURCE_ROOT; };
 		5C681CEF2395F4A8000189F2 /* ProductListViewController+CollectionViewDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductListViewController+CollectionViewDecorator.swift"; sourceTree = "<group>"; };
 		5C681CF12395F791000189F2 /* CollectionViewDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CollectionViewDecorator.swift; path = idus/Presentation/Scenes/ProductList/CollectionViewDecorator.swift; sourceTree = SOURCE_ROOT; };
 		5CBCBE132396070C0098A60D /* ProductCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellViewModel.swift; sourceTree = "<group>"; };
 		5CBCBE18239608DA0098A60D /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		5CDECEFC239D660A00109136 /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
+		5CDECEFD239D660A00109136 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
+		5CDECEFE239D660A00109136 /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; };
+		5CDECEFF239D660B00109136 /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
+		5CDECF00239D660B00109136 /* SF-Pro-Text-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Heavy.otf"; sourceTree = "<group>"; };
+		5CDECF01239D660B00109136 /* SF-Pro-Text-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Light.otf"; sourceTree = "<group>"; };
 		5CEF71EF7F67D6A9D8A98E2F /* Pods_idusTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_idusTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CF88A8B23977F5100E03D2C /* RefreshFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshFooterView.swift; sourceTree = "<group>"; };
 		5CF88A8F2398ECD700E03D2C /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
@@ -374,6 +392,7 @@
 				5C1451DA23954C5400441597 /* CALayer+Sketch.swift */,
 				5C1451DC23954D1B00441597 /* UIColor+Additions.swift */,
 				5CFD6884239637C9004E19E4 /* Data+Decode.swift */,
+				5C145219239D5F0400441597 /* UILabel+Additions.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -381,15 +400,8 @@
 		5C1451E023955D4D00441597 /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				5C1451E823955D6400441597 /* NotoSansCJKkr-Black.otf */,
-				5C1451E523955D6100441597 /* NotoSansCJKkr-Bold.otf */,
-				5C1451E123955D5C00441597 /* NotoSansCJKkr-DemiLight.otf */,
-				5C1451E423955D6000441597 /* NotoSansCJKkr-Light.otf */,
-				5C1451E323955D5F00441597 /* NotoSansCJKkr-Medium.otf */,
-				5C1451E223955D5D00441597 /* NotoSansCJKkr-Regular.otf */,
-				5C1451E923955D6500441597 /* NotoSansCJKkr-Thin.otf */,
-				5C1451E623955D6200441597 /* NotoSansMonoCJKkr-Bold.otf */,
-				5C1451E723955D6300441597 /* NotoSansMonoCJKkr-Regular.otf */,
+				5CDECEFB239D65CD00109136 /* SFPro */,
+				5CDECEF9239D65AF00109136 /* NotoSans */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -440,6 +452,36 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		5CDECEF9239D65AF00109136 /* NotoSans */ = {
+			isa = PBXGroup;
+			children = (
+				5C1451E823955D6400441597 /* NotoSansCJKkr-Black.otf */,
+				5C1451E523955D6100441597 /* NotoSansCJKkr-Bold.otf */,
+				5C1451E123955D5C00441597 /* NotoSansCJKkr-DemiLight.otf */,
+				5C1451E423955D6000441597 /* NotoSansCJKkr-Light.otf */,
+				5C1451E323955D5F00441597 /* NotoSansCJKkr-Medium.otf */,
+				5C1451E223955D5D00441597 /* NotoSansCJKkr-Regular.otf */,
+				5C1451E923955D6500441597 /* NotoSansCJKkr-Thin.otf */,
+				5C1451E623955D6200441597 /* NotoSansMonoCJKkr-Bold.otf */,
+				5C1451E723955D6300441597 /* NotoSansMonoCJKkr-Regular.otf */,
+			);
+			path = NotoSans;
+			sourceTree = "<group>";
+		};
+		5CDECEFB239D65CD00109136 /* SFPro */ = {
+			isa = PBXGroup;
+			children = (
+				5CDECEFC239D660A00109136 /* SF-Pro-Text-Bold.otf */,
+				5CDECF00239D660B00109136 /* SF-Pro-Text-Heavy.otf */,
+				5CDECF01239D660B00109136 /* SF-Pro-Text-Light.otf */,
+				5CDECEFE239D660A00109136 /* SF-Pro-Text-Medium.otf */,
+				5CDECEFD239D660A00109136 /* SF-Pro-Text-Regular.otf */,
+				5CDECEFF239D660B00109136 /* SF-Pro-Text-Semibold.otf */,
+			);
+			name = SFPro;
+			path = "New Group1";
+			sourceTree = "<group>";
+		};
 		5CF88A8E2398ECCB00E03D2C /* ProductDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -451,6 +493,8 @@
 				5CF88A942399EC5100E03D2C /* ThumbnailCollectionViewCell+CollectionViewDecorator.swift */,
 				5CF88A962399F1B400E03D2C /* ThumbnailCell.swift */,
 				5CF88A982399F98100E03D2C /* ThumbnailCellViewModel.swift */,
+				5C145215239D5C8B00441597 /* InfomationCell.swift */,
+				5C145217239D5CA400441597 /* InfomationCellViewModel.swift */,
 			);
 			path = ProductDetail;
 			sourceTree = "<group>";
@@ -595,16 +639,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CDECF03239D661200109136 /* SF-Pro-Text-Heavy.otf in Resources */,
 				5C145198239515F700441597 /* LaunchScreen.storyboard in Resources */,
 				5C1451EF23955D7900441597 /* NotoSansCJKkr-Regular.otf in Resources */,
+				5CDECF02239D660F00109136 /* SF-Pro-Text-Bold.otf in Resources */,
 				5C1451F223955D8100441597 /* NotoSansMonoCJKkr-Regular.otf in Resources */,
 				5C1451EE23955D7700441597 /* NotoSansCJKkr-Medium.otf in Resources */,
+				5CDECF06239D661800109136 /* SF-Pro-Text-Regular.otf in Resources */,
 				5C1451F023955D7B00441597 /* NotoSansCJKkr-Thin.otf in Resources */,
+				5CDECF07239D661A00109136 /* SF-Pro-Text-Semibold.otf in Resources */,
 				5C1451ED23955D7400441597 /* NotoSansCJKkr-Light.otf in Resources */,
+				5CDECF05239D661600109136 /* SF-Pro-Text-Medium.otf in Resources */,
 				5C1451EB23955D6F00441597 /* NotoSansCJKkr-Bold.otf in Resources */,
 				5C1451F123955D7E00441597 /* NotoSansMonoCJKkr-Bold.otf in Resources */,
 				5C145195239515F700441597 /* Assets.xcassets in Resources */,
 				5C1451EA23955D6C00441597 /* NotoSansCJKkr-Black.otf in Resources */,
+				5CDECF04239D661400109136 /* SF-Pro-Text-Light.otf in Resources */,
 				5C1451EC23955D7200441597 /* NotoSansCJKkr-DemiLight.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -723,6 +773,7 @@
 				5C1451F623955EAA00441597 /* App.swift in Sources */,
 				5C1451D923954C3F00441597 /* UIView+Additions.swift in Sources */,
 				5C14521423996B9B00441597 /* BaseTableViewCell.swift in Sources */,
+				5C14521A239D5F0400441597 /* UILabel+Additions.swift in Sources */,
 				5C1451D12395252000441597 /* BaseNavigationController.swift in Sources */,
 				5C1451CB23951FBC00441597 /* Navigator.swift in Sources */,
 				5C1451D72395487000441597 /* BaseCollectionViewCell.swift in Sources */,
@@ -739,10 +790,12 @@
 				5C14520E2399645C00441597 /* ThumbnailCollectionViewCellViewModel.swift in Sources */,
 				5C681CF02395F4A8000189F2 /* ProductListViewController+CollectionViewDecorator.swift in Sources */,
 				5C14520C2399644600441597 /* ThumbnailCollectionViewCell.swift in Sources */,
+				5C145216239D5C8B00441597 /* InfomationCell.swift in Sources */,
 				5CF88A902398ECD700E03D2C /* ProductDetailViewController.swift in Sources */,
 				5CFD688023961F53004E19E4 /* IdusRepositoryType.swift in Sources */,
 				5C1452042395705500441597 /* NetworkDataResponse.swift in Sources */,
 				5C145210239965F400441597 /* ProductDetailViewController+TableViewDecorator.swift in Sources */,
+				5C145218239D5CA400441597 /* InfomationCellViewModel.swift in Sources */,
 				5C14520223956E7700441597 /* NetworkService.swift in Sources */,
 				5C1451F82395623200441597 /* Color.swift in Sources */,
 				5C1451F423955E9400441597 /* Font.swift in Sources */,

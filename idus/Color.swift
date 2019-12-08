@@ -38,4 +38,12 @@ struct Color {
     return UIColor(r: 255, g: 88, b: 108)
   }
   
+  var darkSkyBlue: UIColor {
+    return UIColor(r: 74, g: 144, b: 226)
+  }
+  
+  var paleGreyTwo: UIColor {
+    return UIColor(r: 236, g: 236, b: 245)
+  }
+  
 }

@@ -79,6 +79,10 @@ final class ProductListViewController: BaseViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    UIFont.familyNames.forEach({ familyName in
+        let fontNames = UIFont.fontNames(forFamilyName: familyName)
+        print(familyName, fontNames)
+    })
   }
   
   
