@@ -48,7 +48,7 @@ extension ProductDetailViewController: TableViewViewDecorator {
         withIdentifier: ThumbnailCollectionViewCell.reuseIdentifier, for: indexPath) as? ThumbnailCollectionViewCell else {
         return UITableViewCell()
       }
-      let thumbnailList = viewModel.thumbnailList
+      let thumbnailList = viewModel.thumbnailList()
       cell.viewModel = ThumbnailCollectionViewCellViewModel(thumbnailList: thumbnailList)
       
       return cell

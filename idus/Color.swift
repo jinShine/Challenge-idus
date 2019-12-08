@@ -26,4 +26,8 @@ struct Color {
     return UIColor(r: 246, g: 246, b: 250)
   }
   
+  var darkNavyBlue: UIColor {
+    return UIColor(r: 0, g: 0, b: 10, a: 0.36)
+  }
+  
 }

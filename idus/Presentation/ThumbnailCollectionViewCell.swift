@@ -43,6 +43,8 @@ final class ThumbnailCollectionViewCell: BaseTableViewCell {
 
   let progressView: UIProgressView = {
     let progress = UIProgressView()
+    progress.progressTintColor = .white
+    progress.backgroundColor = App.color.darkNavyBlue
     return progress
   }()
 

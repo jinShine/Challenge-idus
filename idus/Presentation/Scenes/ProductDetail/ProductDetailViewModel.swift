@@ -22,7 +22,6 @@ final class ProductDetailViewModel {
   private let idusUseCase: IdusUseCase
   private let id: Int
   var contentList: [DetailContent] = []
-  var thumbnailList: [String] = []
 
 
   //MARK:- Init
@@ -46,25 +45,19 @@ final class ProductDetailViewModel {
       let contents = model.body
       contents.forEach { self.contentList.append($0) }
 
-      self.getThumbnailList(by: contents).forEach {
-        self.thumbnailList.append($0)
-      }
-
       completion(response)
     }
   }
-
-  private func getThumbnailList(by content: [DetailContent]) -> [String] {
-    var list: [String] = []
-    guard let content = content.first else {
-      return list
+  
+  func thumbnailList() -> [String] {
+    guard let content = contentList.first else {
+      return []
     }
-    list = transformThumbnail(by: content)
-
-    return list
+    
+    return splitThumbnail(by: content)
   }
 
-  private func transformThumbnail(by content: DetailContent) -> [String] {
+  private func splitThumbnail(by content: DetailContent) -> [String] {
     var list: [String] = []
     list.append(content.thumbnail)
     content.thumbnailList
