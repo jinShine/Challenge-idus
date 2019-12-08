@@ -29,8 +29,13 @@ final class ProductListViewController: BaseViewController {
 
   //MARK:- UI Properties
 
-
   var refreshFooterView: RefreshFooterView?
+  
+  let naviImageView: UIImageView = {
+    let imageView = UIImageView(image: UIImage(named: "storefront")?.withRenderingMode(.alwaysTemplate))
+    imageView.tintColor = App.color.dark
+    return imageView
+  }()
 
   lazy var collectionView: UICollectionView = {
     let layout = UICollectionViewFlowLayout()
@@ -81,12 +86,10 @@ final class ProductListViewController: BaseViewController {
   
   override func setupUI() {
     
-    [collectionView].forEach { view.addSubview($0) }
-    
     //Navigation
-    let naviImage = UIImage(named: "storefront")
-    navigationItem.titleView = UIImageView(image: naviImage)
+    navigationItem.titleView = naviImageView
     
+    [collectionView].forEach { view.addSubview($0) }
   }
   
   override func setupConstraints() {
