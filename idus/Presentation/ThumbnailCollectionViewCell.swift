@@ -16,6 +16,7 @@ final class ThumbnailCollectionViewCell: BaseTableViewCell {
     struct ProgressView {
       static let margin: CGFloat = 24
       static let height: CGFloat = 4
+      static let cornerRadius: CGFloat = 4
     }
   }
   
@@ -25,7 +26,6 @@ final class ThumbnailCollectionViewCell: BaseTableViewCell {
     let layout = UICollectionViewFlowLayout()
     layout.scrollDirection = .horizontal
     let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-    collectionView.backgroundColor = .white
     collectionView.isPagingEnabled = true
     collectionView.showsHorizontalScrollIndicator = false
     collectionView.dataSource = self
@@ -45,6 +45,7 @@ final class ThumbnailCollectionViewCell: BaseTableViewCell {
     let progress = UIProgressView()
     progress.progressTintColor = .white
     progress.backgroundColor = App.color.darkNavyBlue
+    progress.layer.cornerRadius = UI.ProgressView.cornerRadius
     return progress
   }()
 
@@ -56,6 +57,7 @@ final class ThumbnailCollectionViewCell: BaseTableViewCell {
   var viewModel: ThumbnailCollectionViewCellViewModel! {
     didSet {
       self.reload()
+      self.progressInitialValue()
     }
   }
   
@@ -94,6 +96,12 @@ final class ThumbnailCollectionViewCell: BaseTableViewCell {
     DispatchQueue.main.async { [weak self] in
       self?.thumbnailCollectionView.reloadData()
     }
+  }
+  
+  func progressInitialValue() {
+    progressView.setProgress(
+      Float(0.0 / thumbnailCollectionView.frame.width) + 1 / Float(viewModel.thumbnailList.count
+    ), animated: false)
   }
 
 }

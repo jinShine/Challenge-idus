@@ -38,7 +38,7 @@ extension ProductListViewController: UICollectionViewDelegate {
                       didSelectItemAt indexPath: IndexPath) {
 
     let id = viewModel.productList[indexPath.item].id
-    navigationController?.pushViewController(navigator.navigate(at: .productDetail(id: id)), animated: true)
+    present(navigator.navigate(at: .productDetail(id: id)), animated: true, completion: nil)
 
   }
   

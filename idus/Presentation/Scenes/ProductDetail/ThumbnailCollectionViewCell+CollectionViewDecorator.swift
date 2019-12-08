@@ -104,6 +104,6 @@ extension ThumbnailCollectionViewCell: CollectionViewDecorator {
 extension ThumbnailCollectionViewCell: UIScrollViewDelegate {
   
   func scrollViewDidScroll(_ scrollView: UIScrollView) {
-    progressView.progress = Float(scrollView.contentOffset.x / thumbnailCollectionView.frame.width) / Float(viewModel.thumbnailList.count)
+    progressView.progress = Float((scrollView.contentOffset.x / thumbnailCollectionView.frame.width) + 1) / Float(viewModel.thumbnailList.count)
   }
 }

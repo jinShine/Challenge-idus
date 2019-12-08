@@ -54,17 +54,13 @@ final class ProductDetailViewModel {
       return []
     }
     
-    return splitThumbnail(by: content)
+    return transformThumbnail(by: content)
   }
 
-  private func splitThumbnail(by content: DetailContent) -> [String] {
-    var list: [String] = []
-    list.append(content.thumbnail)
-    content.thumbnailList
-      .components(separatedBy: "#")
-      .forEach { list.append($0) }
-
-    return list
+  private func transformThumbnail(by content: DetailContent) -> [String] {
+    return content.thumbnailList
+        .components(separatedBy: "#")
+        .map { $0.replacingOccurrences(of: "_320", with: "_720") }
   }
 
 }

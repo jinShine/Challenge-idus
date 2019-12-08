@@ -14,6 +14,10 @@ struct Color {
     return UIColor(r: 20, g: 20, b: 40)
   }
   
+  var darkAlpha: UIColor {
+    return UIColor(r: 20, g: 20, b: 40, a: 0.16)
+  }
+  
   var blueGrey: UIColor {
     return UIColor(r: 171, g: 171, b: 196)
   }
