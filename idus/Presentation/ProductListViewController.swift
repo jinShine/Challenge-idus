@@ -120,5 +120,41 @@ final class ProductListViewController: BaseViewController {
       self?.collectionView.reloadData()
     }
   }
+
+  let transition = PopAnimator()
+}
+
+extension ProductListViewController: UIViewControllerTransitioningDelegate {
   
+  func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+
+    guard let selectedIndexPathCell = collectionView.indexPathsForSelectedItems?.first,
+      let selectedCell = collectionView.cellForItem(at: selectedIndexPathCell) as? ProductCell else { return nil }
+
+    transition.transitionMode = .present
+    transition.origin = selectedCell.center
+//
+//    transition.originFrame = selectedCell.productImageView.convert(selectedCell.frame, to: nil)
+//    transition.originFrame = CGRect(
+//      x: transition.originFrame.origin.x + 20,
+//      y: transition.originFrame.origin.y + 20,
+//      width: transition.originFrame.size.width - 40,
+//      height: transition.originFrame.size.height - 40
+//    )
+//
+//    transition.presenting = true
+
+    return transition
+  }
+
+  func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+
+    guard let selectedIndexPathCell = collectionView.indexPathsForSelectedItems?.first,
+    let selectedCell = collectionView.cellForItem(at: selectedIndexPathCell) as? ProductCell else { return nil }
+
+    transition.transitionMode = .dismiss
+    transition.origin = selectedCell.center
+    return transition
+  }
+
 }

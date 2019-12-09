@@ -36,7 +36,8 @@ struct Navigator {
         id: id
       )
       let viewController = ProductDetailViewController(viewModel: viewModel)
-      viewController.modalPresentationStyle = .pageSheet
+//      viewController.modalPresentationStyle = .pageSheet
+//      viewController.transitioningDelegate = self
       return viewController
     }
   }

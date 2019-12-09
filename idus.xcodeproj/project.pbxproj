@@ -69,6 +69,7 @@
 		5CF88A9D239E30FB00E03D2C /* DescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF88A9C239E30FB00E03D2C /* DescriptionCell.swift */; };
 		5CF88A9F239E310700E03D2C /* DescriptionCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF88A9E239E310700E03D2C /* DescriptionCellViewModel.swift */; };
 		5CF88AA5239E4BB300E03D2C /* NoticeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF88AA4239E4BB300E03D2C /* NoticeCell.swift */; };
+		5CF88AA7239E687100E03D2C /* PopAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF88AA6239E687100E03D2C /* PopAnimator.swift */; };
 		5CFD687A23961DDF004E19E4 /* IdusUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFD687923961DDF004E19E4 /* IdusUseCase.swift */; };
 		5CFD687D23961EC6004E19E4 /* IdusRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFD687C23961EC6004E19E4 /* IdusRepository.swift */; };
 		5CFD688023961F53004E19E4 /* IdusRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFD687F23961F53004E19E4 /* IdusRepositoryType.swift */; };
@@ -165,6 +166,7 @@
 		5CF88A9C239E30FB00E03D2C /* DescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionCell.swift; sourceTree = "<group>"; };
 		5CF88A9E239E310700E03D2C /* DescriptionCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionCellViewModel.swift; sourceTree = "<group>"; };
 		5CF88AA4239E4BB300E03D2C /* NoticeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeCell.swift; sourceTree = "<group>"; };
+		5CF88AA6239E687100E03D2C /* PopAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopAnimator.swift; sourceTree = "<group>"; };
 		5CFD687923961DDF004E19E4 /* IdusUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdusUseCase.swift; sourceTree = "<group>"; };
 		5CFD687C23961EC6004E19E4 /* IdusRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdusRepository.swift; sourceTree = "<group>"; };
 		5CFD687F23961F53004E19E4 /* IdusRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdusRepositoryType.swift; sourceTree = "<group>"; };
@@ -378,6 +380,7 @@
 				5C681CF12395F791000189F2 /* CollectionViewDecorator.swift */,
 				5CF88A8B23977F5100E03D2C /* RefreshFooterView.swift */,
 				5C1452112399697900441597 /* TableViewDecorator.swift */,
+				5CF88AA6239E687100E03D2C /* PopAnimator.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -810,6 +813,7 @@
 				5C145218239D5CA400441597 /* ProductInfoCellViewModel.swift in Sources */,
 				5C14520223956E7700441597 /* NetworkService.swift in Sources */,
 				5C1451F82395623200441597 /* Color.swift in Sources */,
+				5CF88AA7239E687100E03D2C /* PopAnimator.swift in Sources */,
 				5C1451F423955E9400441597 /* Font.swift in Sources */,
 				5CFD687A23961DDF004E19E4 /* IdusUseCase.swift in Sources */,
 				5CBCBE19239608DA0098A60D /* ProductModel.swift in Sources */,

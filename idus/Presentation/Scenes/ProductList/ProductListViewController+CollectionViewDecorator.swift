@@ -38,7 +38,10 @@ extension ProductListViewController: UICollectionViewDelegate {
                       didSelectItemAt indexPath: IndexPath) {
 
     let id = viewModel.productList[indexPath.item].id
-    present(navigator.navigate(at: .productDetail(id: id)), animated: true, completion: nil)
+    let dd = navigator.navigate(at: .productDetail(id: id))
+    dd.transitioningDelegate = self
+    dd.modalPresentationStyle = .pageSheet
+    present(dd, animated: true, completion: nil)
     
   }
   

@@ -120,7 +120,7 @@ final class ProductDetailViewController: BaseViewController {
       $0.size.equalTo(UI.DismissButton.size)
     }
     
-    tableView.snp.makeConstraints {)
+    tableView.snp.makeConstraints {
       $0.edges.equalToSuperview()
     }
     
