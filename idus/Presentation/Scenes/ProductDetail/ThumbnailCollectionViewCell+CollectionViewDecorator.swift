@@ -93,11 +93,8 @@ extension ThumbnailCollectionViewCell: CollectionViewDecorator {
       return UICollectionViewCell()
 
     }
-
   }
 }
-
-
 
 //MARK: - ScrollView delegate
 

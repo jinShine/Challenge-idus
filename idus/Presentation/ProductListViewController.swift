@@ -13,7 +13,6 @@ final class ProductListViewController: BaseViewController {
   //MARK:- Constant
   
   struct UI {
-
     static let maxTitleHeight: CGFloat = 40
     static let maxSellerHeight: CGFloat = 20
     static let titleTopMargin: CGFloat = 4
@@ -79,10 +78,6 @@ final class ProductListViewController: BaseViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    UIFont.familyNames.forEach({ familyName in
-        let fontNames = UIFont.fontNames(forFamilyName: familyName)
-        print(familyName, fontNames)
-    })
   }
   
   

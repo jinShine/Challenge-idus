@@ -66,7 +66,7 @@ struct Font {
   
   //MARK:- Apple SD GothicNeo
   func appleSDGothicNeoBold(size: CGFloat) -> UIFont {
-    return UIFont(name: "AppleSDGothicNeo-Bold", size: UIFont.systemFontSize) ?? UIFont.systemFont(ofSize: size)
+    return UIFont(name: "AppleSDGothicNeo-Bold", size: size) ?? UIFont.systemFont(ofSize: size)
   }
   
 }

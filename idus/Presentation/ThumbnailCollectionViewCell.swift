@@ -30,12 +30,9 @@ final class ThumbnailCollectionViewCell: BaseTableViewCell {
     collectionView.showsHorizontalScrollIndicator = false
     collectionView.dataSource = self
     collectionView.delegate = self
-//
+
     collectionView.register(ThumbnailCell.classForCoder(),
                             forCellWithReuseIdentifier: ThumbnailCell.reuseIdentifier)
-//    collectionView.register(RefreshFooterView.classForCoder(),
-//                            forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter,
-//                            withReuseIdentifier: RefreshFooterView.reuseIdentifier)
     
     return collectionView
   }()

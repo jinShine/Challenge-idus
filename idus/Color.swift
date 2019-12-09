@@ -45,5 +45,9 @@ struct Color {
   var paleGreyTwo: UIColor {
     return UIColor(r: 236, g: 236, b: 245)
   }
+
+  var coolGrey: UIColor {
+    return UIColor(r: 163, g: 163, b: 181)
+  }
   
 }

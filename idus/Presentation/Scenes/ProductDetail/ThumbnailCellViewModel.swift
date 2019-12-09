@@ -10,6 +10,8 @@ import Foundation
 
 class ThumbnailCellViewModel {
 
+  //MARK: Properties
+
   let thumbnail: String
 
 

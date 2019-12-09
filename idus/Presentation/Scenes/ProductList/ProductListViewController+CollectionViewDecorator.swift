@@ -39,7 +39,7 @@ extension ProductListViewController: UICollectionViewDelegate {
 
     let id = viewModel.productList[indexPath.item].id
     present(navigator.navigate(at: .productDetail(id: id)), animated: true, completion: nil)
-
+    
   }
   
   func collectionView(_ collectionView: UICollectionView,

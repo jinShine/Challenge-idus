@@ -10,10 +10,14 @@ import UIKit
 
 class ProductCellViewModel {
 
+  //MARK: Properties
+  
   var id: Int
   var productImage: String
   var title: String
   var seller: String
+
+  //MARK:- Init
 
   init(content: ProductContent) {
     self.id = content.id

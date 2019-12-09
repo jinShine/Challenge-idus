@@ -47,11 +47,20 @@ final class ProductDetailViewController: BaseViewController {
     let tableView = UITableView()
     tableView.estimatedRowHeight = UI.TableView.estimateRowHeight
     tableView.rowHeight = UITableView.automaticDimension
+    tableView.separatorStyle = .none
+    tableView.allowsSelection = false
+    tableView.showsVerticalScrollIndicator = false
     tableView.delegate = self
     tableView.dataSource = self
     
     tableView.register(ThumbnailCollectionViewCell.classForCoder(),
                        forCellReuseIdentifier: ThumbnailCollectionViewCell.reuseIdentifier)
+    tableView.register(ProductInfoCell.classForCoder(),
+                       forCellReuseIdentifier: ProductInfoCell.reuseIdentifier)
+    tableView.register(DescriptionCell.classForCoder(),
+                       forCellReuseIdentifier: DescriptionCell.reuseIdentifier)
+    tableView.register(NoticeCell.classForCoder(),
+                       forCellReuseIdentifier: NoticeCell.reuseIdentifier)
 
     return tableView
   }()
@@ -111,7 +120,7 @@ final class ProductDetailViewController: BaseViewController {
       $0.size.equalTo(UI.DismissButton.size)
     }
     
-    tableView.snp.makeConstraints {
+    tableView.snp.makeConstraints {)
       $0.edges.equalToSuperview()
     }
     
