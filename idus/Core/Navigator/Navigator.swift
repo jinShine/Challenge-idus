@@ -23,7 +23,9 @@ struct Navigator {
           idusRepository: IdusRepository()
         )
       )
-      let viewController = ProductListViewController(viewModel: viewModel, navigator: self)
+      let viewController = ProductListViewController(
+        viewModel: viewModel, navigator: self, transition: ZoomAnimator()
+      )
       let navigationController = BaseNavigationController(rootViewController: viewController)
 
       return navigationController
@@ -36,8 +38,8 @@ struct Navigator {
         id: id
       )
       let viewController = ProductDetailViewController(viewModel: viewModel)
-//      viewController.modalPresentationStyle = .pageSheet
-//      viewController.transitioningDelegate = self
+      viewController.modalPresentationStyle = .fullScreen
+
       return viewController
     }
   }

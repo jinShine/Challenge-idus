@@ -17,6 +17,7 @@ final class ProductCell: BaseCollectionViewCell {
     static let titleTopMargin: CGFloat = 4
     static let titleLeftMargin: CGFloat = 8
     static let titleRightMargin: CGFloat = -8
+    static let sellerHeight: CGFloat = 20
   }
   
   //MARK:- UI Properties
@@ -92,6 +93,7 @@ final class ProductCell: BaseCollectionViewCell {
       $0.top.equalTo(productImageView.snp.bottom).offset(UI.titleTopMargin)
       $0.leading.equalTo(productImageView).offset(UI.titleLeftMargin)
       $0.trailing.equalTo(productImageView).offset(UI.titleRightMargin)
+      $0.height.greaterThanOrEqualTo(UI.sellerHeight)
     }
     
     sellerLabel.snp.makeConstraints {
@@ -99,6 +101,7 @@ final class ProductCell: BaseCollectionViewCell {
       $0.leading.equalTo(titleLabel)
       $0.trailing.equalTo(titleLabel)
       $0.bottom.lessThanOrEqualToSuperview()
+      $0.height.equalTo(UI.sellerHeight)
     }
 
   }

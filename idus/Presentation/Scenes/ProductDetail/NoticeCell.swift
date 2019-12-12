@@ -16,7 +16,7 @@ class NoticeCell: BaseTableViewCell {
     struct NoticeBackgroundView {
       static let cornerRadius: CGFloat = 14
       static let topMargin: CGFloat = 40
-      static let bottomMargin: CGFloat = -70
+      static let bottomMargin: CGFloat = -114
       static let leadinMargin: CGFloat = 24
       static let trailingMargin: CGFloat = -24
     }

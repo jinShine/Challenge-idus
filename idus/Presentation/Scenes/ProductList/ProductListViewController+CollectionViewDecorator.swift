@@ -37,11 +37,7 @@ extension ProductListViewController: UICollectionViewDelegate {
   func collectionView(_ collectionView: UICollectionView,
                       didSelectItemAt indexPath: IndexPath) {
 
-    let id = viewModel.productList[indexPath.item].id
-    let dd = navigator.navigate(at: .productDetail(id: id))
-    dd.transitioningDelegate = self
-    dd.modalPresentationStyle = .pageSheet
-    present(dd, animated: true, completion: nil)
+    openDetail(indexPath: indexPath)
     
   }
   
@@ -93,7 +89,7 @@ extension ProductListViewController: UICollectionViewDelegateFlowLayout {
       - (UI.CollectionView.inset.left)
       - (UI.CollectionView.itemSpacing / UI.CollectionView.column)
 
-    let calculatedHeight = calculatedWidth + UI.maxTitleHeight + UI.maxSellerHeight + UI.titleTopMargin
+    let calculatedHeight = calculatedWidth + UI.maxTitleHeight + UI.maxSellerHeight + UI.titleTopMargin + 10
 
     return CGSize(width: calculatedWidth , height: calculatedHeight)
   }

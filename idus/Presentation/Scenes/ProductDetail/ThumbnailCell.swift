@@ -13,7 +13,7 @@ class ThumbnailCell: BaseCollectionViewCell {
   //MARK:- Constant
 
   struct UI {
-
+    static let contentCornerRadius: CGFloat = 30
   }
 
   //MARK:- UI Properties
@@ -51,6 +51,11 @@ class ThumbnailCell: BaseCollectionViewCell {
   //MARK:- Methods
 
   override func setupUI() {
+
+    clipsToBounds = true
+    layer.cornerRadius = UI.contentCornerRadius
+    layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+
     contentView.addSubview(thumbnailImageView)
   }
 

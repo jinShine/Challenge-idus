@@ -111,12 +111,13 @@ class ProductInfoCell: BaseTableViewCell {
       titleLabel.text = viewModel.title
       discountRateLabel.text = viewModel.discountRate
       discountCostLabel.text = viewModel.discountCost
-      costLabel.text = viewModel.cost
 
       if discountRateLabel.text == nil && discountCostLabel.text == nil {
+        costLabel.text = viewModel.cost
         costStackView.spacing = UI.CoastStackView.spacingZero
       } else {
         costStackView.spacing = UI.CoastStackView.spacingMargin
+        costLabel.attributedText = viewModel.cost.cancelLine()
       }
     }
   }

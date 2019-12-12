@@ -45,8 +45,10 @@ final class ProductDetailViewController: BaseViewController {
   
   lazy var tableView: UITableView = {
     let tableView = UITableView()
+    tableView.backgroundColor = .black
     tableView.estimatedRowHeight = UI.TableView.estimateRowHeight
     tableView.rowHeight = UITableView.automaticDimension
+    tableView.contentInset = UIEdgeInsets(top: UIApplication.shared.statusBarFrame.height, left: 0, bottom: 0, right: 0)
     tableView.separatorStyle = .none
     tableView.allowsSelection = false
     tableView.showsVerticalScrollIndicator = false
@@ -80,6 +82,10 @@ final class ProductDetailViewController: BaseViewController {
 
   //MARK:- Properties
 
+  override var preferredStatusBarStyle: UIStatusBarStyle {
+    return .lightContent
+  }
+
   let viewModel: ProductDetailViewModel
 
 
@@ -102,26 +108,30 @@ final class ProductDetailViewController: BaseViewController {
     super.viewDidLoad()
   }
 
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    setStatusBarViewBackground(.clear)
+  }
 
   //MARK:- Methods
 
   override func setupUI() {
-    self.navigationController?.setNavigationBarHidden(true, animated: false)
-
+    view.backgroundColor = .black
     [tableView, dismissButton, purchaseButton].forEach { view.addSubview($0) }
-
   }
 
   override func setupConstraints() {
     
     dismissButton.snp.makeConstraints {
-      $0.top.equalToSuperview().offset(UI.DismissButton.margin)
+      $0.top.equalToSuperview().offset(UIApplication.shared.statusBarFrame.height + UI.DismissButton.margin)
       $0.trailing.equalToSuperview().offset(-UI.DismissButton.margin)
       $0.size.equalTo(UI.DismissButton.size)
     }
     
     tableView.snp.makeConstraints {
-      $0.edges.equalToSuperview()
+      $0.top.equalToSuperview().offset(-UIApplication.shared.statusBarFrame.height)
+      $0.bottom.equalToSuperview().offset(UIApplication.shared.statusBarFrame.height)
+      $0.leading.trailing.equalToSuperview()
     }
     
     purchaseButton.snp.makeConstraints {

@@ -13,7 +13,7 @@ final class ProductListViewController: BaseViewController {
   //MARK:- Constant
   
   struct UI {
-    static let maxTitleHeight: CGFloat = 40
+    static let maxTitleHeight: CGFloat = 42
     static let maxSellerHeight: CGFloat = 20
     static let titleTopMargin: CGFloat = 4
 
@@ -51,20 +51,21 @@ final class ProductListViewController: BaseViewController {
     
     return collectionView
   }()
-  
-  
+
 
   //MARK:- Properties
   
   let viewModel: ProductListViewModel
   let navigator: Navigator
+  let transition: ZoomAnimator
   
   
   //MARK:- Init
   
-  init(viewModel: ProductListViewModel, navigator: Navigator) {
+  init(viewModel: ProductListViewModel, navigator: Navigator, transition: ZoomAnimator) {
     self.viewModel = viewModel
     self.navigator = navigator
+    self.transition = transition
 
     super.init()
   }
@@ -102,7 +103,6 @@ final class ProductListViewController: BaseViewController {
   }
 
   private func fetchProductList() {
-
     viewModel.updateProductList(page: viewModel.pageCount) { [weak self] response in
       if response.result == .failure {
         DLog(response.error?.message)
@@ -121,40 +121,17 @@ final class ProductListViewController: BaseViewController {
     }
   }
 
-  let transition = PopAnimator()
-}
+  func openDetail(indexPath: IndexPath) {
+    let id = viewModel.productList[indexPath.item].id
+    let productDetailVC = navigator.navigate(at: .productDetail(id: id))
+    productDetailVC.transitioningDelegate = self
 
-extension ProductListViewController: UIViewControllerTransitioningDelegate {
-  
-  func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    let thumbnailURL = URL(string: viewModel.productList[indexPath.item].thumbnail)
+    transition.targetIndexPath = indexPath
+    transition.targetImageView.kf.setImage(with: thumbnailURL)
 
-    guard let selectedIndexPathCell = collectionView.indexPathsForSelectedItems?.first,
-      let selectedCell = collectionView.cellForItem(at: selectedIndexPathCell) as? ProductCell else { return nil }
-
-    transition.transitionMode = .present
-    transition.origin = selectedCell.center
-//
-//    transition.originFrame = selectedCell.productImageView.convert(selectedCell.frame, to: nil)
-//    transition.originFrame = CGRect(
-//      x: transition.originFrame.origin.x + 20,
-//      y: transition.originFrame.origin.y + 20,
-//      width: transition.originFrame.size.width - 40,
-//      height: transition.originFrame.size.height - 40
-//    )
-//
-//    transition.presenting = true
-
-    return transition
-  }
-
-  func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-
-    guard let selectedIndexPathCell = collectionView.indexPathsForSelectedItems?.first,
-    let selectedCell = collectionView.cellForItem(at: selectedIndexPathCell) as? ProductCell else { return nil }
-
-    transition.transitionMode = .dismiss
-    transition.origin = selectedCell.center
-    return transition
+    present(productDetailVC, animated: true, completion: nil)
   }
 
 }
+
