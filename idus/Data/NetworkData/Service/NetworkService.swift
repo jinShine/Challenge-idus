@@ -11,7 +11,13 @@ import Foundation
 import Moya
 import Alamofire
 
-struct NetworkService {
+protocol NetworkServiceType {
+  func buildRequest<T: Decodable>(to router: IdusRouter,
+                                  decoder: T.Type,
+                                  completion: @escaping (NetworkDataResponse) -> Void)
+}
+
+struct NetworkService: NetworkServiceType {
 
   static private let sharedManager: Alamofire.SessionManager = {
     let configuration = URLSessionConfiguration.default
@@ -24,12 +30,12 @@ struct NetworkService {
   
   private let provider: MoyaProvider<IdusRouter> = {
     let provider = MoyaProvider<IdusRouter>(endpointClosure: MoyaProvider.defaultEndpointMapping,
-                                        requestClosure: MoyaProvider<IdusRouter>.defaultRequestMapping,
-                                        stubClosure: MoyaProvider.neverStub,
-                                        callbackQueue: nil,
-                                        manager: sharedManager,
-                                        plugins: [],
-                                        trackInflights: false)
+                                            requestClosure: MoyaProvider<IdusRouter>.defaultRequestMapping,
+                                            stubClosure: MoyaProvider.neverStub,
+                                            callbackQueue: nil,
+                                            manager: sharedManager,
+                                            plugins: [],
+                                            trackInflights: false)
     return provider
   }()
   

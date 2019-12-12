@@ -1,0 +1,4 @@
+{
+  "statusCode": 400,
+  "body": "ParameterIsNotInteger - 요청 변수가 Integer 타입이 아닙니다!"
+}
