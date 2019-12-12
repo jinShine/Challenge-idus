@@ -56,7 +56,8 @@ class BaseViewController: UIViewController {
       statusbarView.translatesAutoresizingMaskIntoConstraints = false
       NSLayoutConstraint.activate([
         statusbarView.heightAnchor.constraint(equalToConstant: statusBarHeight),
-        statusbarView.widthAnchor.constraint(equalTo: view.widthAnchor),
+        statusbarView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+        statusbarView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
         statusbarView.topAnchor.constraint(equalTo: view.topAnchor)
       ])
 
