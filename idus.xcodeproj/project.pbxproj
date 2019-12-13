@@ -76,6 +76,8 @@
 		5CF88B0823A206DD00E03D2C /* product_list.json in Resources */ = {isa = PBXBuildFile; fileRef = 5CF88B0723A206DD00E03D2C /* product_list.json */; };
 		5CF88B0A23A2070A00E03D2C /* product_detail.json in Resources */ = {isa = PBXBuildFile; fileRef = 5CF88B0923A2070A00E03D2C /* product_detail.json */; };
 		5CF88B0C23A21D4900E03D2C /* network_error.json in Resources */ = {isa = PBXBuildFile; fileRef = 5CF88B0B23A21D4900E03D2C /* network_error.json */; };
+		5CF88B1223A3A55A00E03D2C /* ProductListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF88B1123A3A55A00E03D2C /* ProductListViewModelTest.swift */; };
+		5CF88B1523A3A57B00E03D2C /* ProductCellViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF88B1423A3A57B00E03D2C /* ProductCellViewModelTest.swift */; };
 		5CFD687A23961DDF004E19E4 /* IdusUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFD687923961DDF004E19E4 /* IdusUseCase.swift */; };
 		5CFD687D23961EC6004E19E4 /* IdusRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFD687C23961EC6004E19E4 /* IdusRepository.swift */; };
 		5CFD688023961F53004E19E4 /* IdusRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFD687F23961F53004E19E4 /* IdusRepositoryType.swift */; };
@@ -179,6 +181,8 @@
 		5CF88B0723A206DD00E03D2C /* product_list.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = product_list.json; sourceTree = "<group>"; };
 		5CF88B0923A2070A00E03D2C /* product_detail.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = product_detail.json; sourceTree = "<group>"; };
 		5CF88B0B23A21D4900E03D2C /* network_error.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = network_error.json; sourceTree = "<group>"; };
+		5CF88B1123A3A55A00E03D2C /* ProductListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModelTest.swift; sourceTree = "<group>"; };
+		5CF88B1423A3A57B00E03D2C /* ProductCellViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellViewModelTest.swift; sourceTree = "<group>"; };
 		5CFD687923961DDF004E19E4 /* IdusUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdusUseCase.swift; sourceTree = "<group>"; };
 		5CFD687C23961EC6004E19E4 /* IdusRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdusRepository.swift; sourceTree = "<group>"; };
 		5CFD687F23961F53004E19E4 /* IdusRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdusRepositoryType.swift; sourceTree = "<group>"; };
@@ -281,6 +285,7 @@
 		5C1451A1239515F700441597 /* idusTests */ = {
 			isa = PBXGroup;
 			children = (
+				5CF88B1023A39EED00E03D2C /* Presentation */,
 				5CF88B0623A2067A00E03D2C /* JSON */,
 				5C1451A2239515F700441597 /* idusTests.swift */,
 				5C1451A4239515F700441597 /* Info.plist */,
@@ -551,6 +556,15 @@
 				5CF88B0B23A21D4900E03D2C /* network_error.json */,
 			);
 			path = JSON;
+			sourceTree = "<group>";
+		};
+		5CF88B1023A39EED00E03D2C /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				5CF88B1123A3A55A00E03D2C /* ProductListViewModelTest.swift */,
+				5CF88B1423A3A57B00E03D2C /* ProductCellViewModelTest.swift */,
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 		5CFD687823961D90004E19E4 /* UseCase */ = {
@@ -879,7 +893,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CF88B1223A3A55A00E03D2C /* ProductListViewModelTest.swift in Sources */,
 				5CF88B0523A2016C00E03D2C /* NetworkServiceStub.swift in Sources */,
+				5CF88B1523A3A57B00E03D2C /* ProductCellViewModelTest.swift in Sources */,
 				5C1451A3239515F700441597 /* idusTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
