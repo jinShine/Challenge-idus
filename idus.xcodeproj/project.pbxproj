@@ -12,7 +12,6 @@
 		5C14518C239515F300441597 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C14518B239515F300441597 /* AppDelegate.swift */; };
 		5C145195239515F700441597 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C145194239515F700441597 /* Assets.xcassets */; };
 		5C145198239515F700441597 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C145196239515F700441597 /* LaunchScreen.storyboard */; };
-		5C1451A3239515F700441597 /* idusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1451A2239515F700441597 /* idusTests.swift */; };
 		5C1451AE239515F700441597 /* idusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1451AD239515F700441597 /* idusUITests.swift */; };
 		5C1451C923951D3600441597 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1451C823951D3600441597 /* BaseViewController.swift */; };
 		5C1451CB23951FBC00441597 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1451CA23951FBC00441597 /* Navigator.swift */; };
@@ -78,6 +77,8 @@
 		5CF88B0C23A21D4900E03D2C /* network_error.json in Resources */ = {isa = PBXBuildFile; fileRef = 5CF88B0B23A21D4900E03D2C /* network_error.json */; };
 		5CF88B1223A3A55A00E03D2C /* ProductListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF88B1123A3A55A00E03D2C /* ProductListViewModelTest.swift */; };
 		5CF88B1523A3A57B00E03D2C /* ProductCellViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF88B1423A3A57B00E03D2C /* ProductCellViewModelTest.swift */; };
+		5CFA111323A3FDDD00B3358A /* XCTestCase+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFA111223A3FDDD00B3358A /* XCTestCase+Additions.swift */; };
+		5CFA111523A408DE00B3358A /* Mocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFA111423A408DE00B3358A /* Mocker.swift */; };
 		5CFD687A23961DDF004E19E4 /* IdusUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFD687923961DDF004E19E4 /* IdusUseCase.swift */; };
 		5CFD687D23961EC6004E19E4 /* IdusRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFD687C23961EC6004E19E4 /* IdusRepository.swift */; };
 		5CFD688023961F53004E19E4 /* IdusRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFD687F23961F53004E19E4 /* IdusRepositoryType.swift */; };
@@ -113,7 +114,6 @@
 		5C145197239515F700441597 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C145199239515F700441597 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C14519E239515F700441597 /* idusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = idusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5C1451A2239515F700441597 /* idusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = idusTests.swift; sourceTree = "<group>"; };
 		5C1451A4239515F700441597 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C1451A9239515F700441597 /* idusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = idusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C1451AD239515F700441597 /* idusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = idusUITests.swift; sourceTree = "<group>"; };
@@ -183,6 +183,8 @@
 		5CF88B0B23A21D4900E03D2C /* network_error.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = network_error.json; sourceTree = "<group>"; };
 		5CF88B1123A3A55A00E03D2C /* ProductListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModelTest.swift; sourceTree = "<group>"; };
 		5CF88B1423A3A57B00E03D2C /* ProductCellViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellViewModelTest.swift; sourceTree = "<group>"; };
+		5CFA111223A3FDDD00B3358A /* XCTestCase+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Additions.swift"; sourceTree = SOURCE_ROOT; };
+		5CFA111423A408DE00B3358A /* Mocker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocker.swift; sourceTree = "<group>"; };
 		5CFD687923961DDF004E19E4 /* IdusUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdusUseCase.swift; sourceTree = "<group>"; };
 		5CFD687C23961EC6004E19E4 /* IdusRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdusRepository.swift; sourceTree = "<group>"; };
 		5CFD687F23961F53004E19E4 /* IdusRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdusRepositoryType.swift; sourceTree = "<group>"; };
@@ -285,11 +287,12 @@
 		5C1451A1239515F700441597 /* idusTests */ = {
 			isa = PBXGroup;
 			children = (
+				5CFA111123A3FDB000B3358A /* Extension */,
 				5CF88B1023A39EED00E03D2C /* Presentation */,
 				5CF88B0623A2067A00E03D2C /* JSON */,
-				5C1451A2239515F700441597 /* idusTests.swift */,
 				5C1451A4239515F700441597 /* Info.plist */,
 				5CF88B0423A2016C00E03D2C /* NetworkServiceStub.swift */,
+				5CFA111423A408DE00B3358A /* Mocker.swift */,
 			);
 			path = idusTests;
 			sourceTree = "<group>";
@@ -565,6 +568,14 @@
 				5CF88B1423A3A57B00E03D2C /* ProductCellViewModelTest.swift */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		5CFA111123A3FDB000B3358A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5CFA111223A3FDDD00B3358A /* XCTestCase+Additions.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		5CFD687823961D90004E19E4 /* UseCase */ = {
@@ -896,7 +907,8 @@
 				5CF88B1223A3A55A00E03D2C /* ProductListViewModelTest.swift in Sources */,
 				5CF88B0523A2016C00E03D2C /* NetworkServiceStub.swift in Sources */,
 				5CF88B1523A3A57B00E03D2C /* ProductCellViewModelTest.swift in Sources */,
-				5C1451A3239515F700441597 /* idusTests.swift in Sources */,
+				5CFA111523A408DE00B3358A /* Mocker.swift in Sources */,
+				5CFA111323A3FDDD00B3358A /* XCTestCase+Additions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
