@@ -7,27 +7,34 @@
 //
 
 import XCTest
+@testable import idus
 
 class ProductCellViewModelTest: XCTestCase {
-
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+  
+  private var content: ProductContent?
+  
+  override func setUp() {
+    expectation { expectationn in
+      Morker.product(stub: .product_list) { product in
+        self.content = product.first
+        expectationn.fulfill()
+      }
     }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
+  }
+  
+  override func tearDown() { }
+  
+  func test_ProductContent_NotNil() {
+    XCTAssertNotNil(content)
+  }
+  
+  func test_ProductCellViewModel() {
+    let vm = ProductCellViewModel(content: content!)
+    
+    XCTAssertEqual(vm.id, content?.id)
+    XCTAssertEqual(vm.productImage, content?.thumbnail)
+    XCTAssertEqual(vm.title, content?.title)
+    XCTAssertEqual(vm.seller, content?.seller)
+  }
+  
 }
