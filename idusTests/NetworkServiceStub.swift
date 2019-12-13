@@ -21,7 +21,7 @@ protocol NetworkServiceStubProtocol {
 }
 
 
-class NetworkServiceStub: NetworkServiceStubProtocol {
+class NetworkServiceStub: NetworkServiceStubProtocol, NetworkServiceType {
 
   let stub: StubType
 
@@ -43,11 +43,9 @@ class NetworkServiceStub: NetworkServiceStubProtocol {
       return NetworkError.transform(jsonData: data)
     }
   }
-}
-
-extension NetworkServiceStub: NetworkServiceType {
 
   func buildRequest<T>(to router: IdusRouter, decoder: T.Type, completion: @escaping (NetworkDataResponse) -> Void) where T : Decodable {
     completion(get(decoder: decoder, resource: stub.rawValue, ext: "json"))
   }
+
 }
