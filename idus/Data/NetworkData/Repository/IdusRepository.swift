@@ -10,9 +10,9 @@ import Foundation
 
 final class IdusRepository {
 
-  private let networkService: NetworkService
+  private let networkService: NetworkServiceType
 
-  init(networkService: NetworkService = NetworkService()) {
+  init(networkService: NetworkServiceType = NetworkService()) {
     self.networkService = networkService
   }
 
