@@ -49,6 +49,9 @@ extension IdusRouter: TargetType {
   }
   
   var headers: [String : String]? {
-    return ["Content-Type": "application/json"]
+    return [
+      "Content-Type" : "application/json",
+      "token" : "17781fd0e005ba7dbe802a5a3f3ea4b7"
+    ]
   }
 }
