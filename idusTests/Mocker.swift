@@ -22,4 +22,18 @@ class Morker: NetworkServiceStub {
     }
   }
   
+  static func productDetail(stub: StubType, completion: @escaping (DetailContent) -> Void) {
+    
+    let morker = Morker(stub: .product_detail)
+    morker.buildRequest(to: .productDetail(id: 1), decoder: ProductDetailModel.self) { response in
+      guard let model = response.json as? ProductDetailModel else {
+        return
+      }
+      
+      if let detailContent = model.body.first {
+        completion(detailContent)
+      }
+    }
+  }
+  
 }
