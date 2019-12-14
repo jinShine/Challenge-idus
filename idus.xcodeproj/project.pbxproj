@@ -79,6 +79,8 @@
 		5CF88B1523A3A57B00E03D2C /* ProductCellViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF88B1423A3A57B00E03D2C /* ProductCellViewModelTest.swift */; };
 		5CFA111323A3FDDD00B3358A /* XCTestCase+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFA111223A3FDDD00B3358A /* XCTestCase+Additions.swift */; };
 		5CFA111523A408DE00B3358A /* Mocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFA111423A408DE00B3358A /* Mocker.swift */; };
+		5CFA111B23A486D000B3358A /* ProductDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFA111A23A486D000B3358A /* ProductDetailViewModel.swift */; };
+		5CFA111D23A4CC9300B3358A /* ThumbnailCollectionViewCellViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFA111C23A4CC9300B3358A /* ThumbnailCollectionViewCellViewModelTest.swift */; };
 		5CFD687A23961DDF004E19E4 /* IdusUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFD687923961DDF004E19E4 /* IdusUseCase.swift */; };
 		5CFD687D23961EC6004E19E4 /* IdusRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFD687C23961EC6004E19E4 /* IdusRepository.swift */; };
 		5CFD688023961F53004E19E4 /* IdusRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFD687F23961F53004E19E4 /* IdusRepositoryType.swift */; };
@@ -185,6 +187,8 @@
 		5CF88B1423A3A57B00E03D2C /* ProductCellViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellViewModelTest.swift; sourceTree = "<group>"; };
 		5CFA111223A3FDDD00B3358A /* XCTestCase+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Additions.swift"; sourceTree = SOURCE_ROOT; };
 		5CFA111423A408DE00B3358A /* Mocker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocker.swift; sourceTree = "<group>"; };
+		5CFA111A23A486D000B3358A /* ProductDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProductDetailViewModel.swift; path = idusTests/Presentation/ProductDetailViewModel.swift; sourceTree = SOURCE_ROOT; };
+		5CFA111C23A4CC9300B3358A /* ThumbnailCollectionViewCellViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailCollectionViewCellViewModelTest.swift; sourceTree = "<group>"; };
 		5CFD687923961DDF004E19E4 /* IdusUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdusUseCase.swift; sourceTree = "<group>"; };
 		5CFD687C23961EC6004E19E4 /* IdusRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdusRepository.swift; sourceTree = "<group>"; };
 		5CFD687F23961F53004E19E4 /* IdusRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdusRepositoryType.swift; sourceTree = "<group>"; };
@@ -564,8 +568,8 @@
 		5CF88B1023A39EED00E03D2C /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				5CF88B1123A3A55A00E03D2C /* ProductListViewModelTest.swift */,
-				5CF88B1423A3A57B00E03D2C /* ProductCellViewModelTest.swift */,
+				5CFA111623A486A400B3358A /* ProductList */,
+				5CFA111923A486BA00B3358A /* ProductDetail */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -576,6 +580,24 @@
 				5CFA111223A3FDDD00B3358A /* XCTestCase+Additions.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		5CFA111623A486A400B3358A /* ProductList */ = {
+			isa = PBXGroup;
+			children = (
+				5CF88B1123A3A55A00E03D2C /* ProductListViewModelTest.swift */,
+				5CF88B1423A3A57B00E03D2C /* ProductCellViewModelTest.swift */,
+			);
+			path = ProductList;
+			sourceTree = "<group>";
+		};
+		5CFA111923A486BA00B3358A /* ProductDetail */ = {
+			isa = PBXGroup;
+			children = (
+				5CFA111A23A486D000B3358A /* ProductDetailViewModel.swift */,
+				5CFA111C23A4CC9300B3358A /* ThumbnailCollectionViewCellViewModelTest.swift */,
+			);
+			path = ProductDetail;
 			sourceTree = "<group>";
 		};
 		5CFD687823961D90004E19E4 /* UseCase */ = {
@@ -904,11 +926,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CFA111D23A4CC9300B3358A /* ThumbnailCollectionViewCellViewModelTest.swift in Sources */,
 				5CF88B1223A3A55A00E03D2C /* ProductListViewModelTest.swift in Sources */,
 				5CF88B0523A2016C00E03D2C /* NetworkServiceStub.swift in Sources */,
 				5CF88B1523A3A57B00E03D2C /* ProductCellViewModelTest.swift in Sources */,
 				5CFA111523A408DE00B3358A /* Mocker.swift in Sources */,
 				5CFA111323A3FDDD00B3358A /* XCTestCase+Additions.swift in Sources */,
+				5CFA111B23A486D000B3358A /* ProductDetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

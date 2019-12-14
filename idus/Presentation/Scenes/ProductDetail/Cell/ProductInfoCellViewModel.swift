@@ -21,11 +21,18 @@ class ProductInfoCellViewModel {
 
   //MARK:- Init
 
-  init(seller: String, title: String, discountRate: String? = "", discountCost: String? = "", cost: String) {
+  init(seller: String, title: String, discountRate: String? = nil, discountCost: String? = nil, cost: String) {
+
     self.seller = seller
     self.title = title
-    self.discountRate = discountRate
-    self.discountCost = discountCost
+    if let discountRate = discountRate {
+      self.discountRate = "-" + discountRate
+    }
+    
+    if let discountCost = discountCost {
+      self.discountCost = discountCost
+    }
+    
     self.cost = cost
   }
 

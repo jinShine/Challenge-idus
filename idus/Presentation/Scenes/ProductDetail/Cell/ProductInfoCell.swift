@@ -111,7 +111,6 @@ class ProductInfoCell: BaseTableViewCell {
       titleLabel.text = viewModel.title
       discountRateLabel.text = viewModel.discountRate
       discountCostLabel.text = viewModel.discountCost
-
       if discountRateLabel.text == nil && discountCostLabel.text == nil {
         costLabel.text = viewModel.cost
         costStackView.spacing = UI.CoastStackView.spacingZero
