@@ -143,7 +143,7 @@
 		5C1451E823955D6400441597 /* NotoSansCJKkr-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Black.otf"; sourceTree = "<group>"; };
 		5C1451E923955D6500441597 /* NotoSansCJKkr-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Thin.otf"; sourceTree = "<group>"; };
 		5C1451F323955E9400441597 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
-		5C1451F523955EAA00441597 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = SOURCE_ROOT; };
+		5C1451F523955EAA00441597 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = App.swift; path = idus/Core/App.swift; sourceTree = SOURCE_ROOT; };
 		5C1451F72395623200441597 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Color.swift; path = idus/Color.swift; sourceTree = SOURCE_ROOT; };
 		5C1451FF23956B6A00441597 /* IdusRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IdusRouter.swift; path = idus/Data/NetworkData/IdusRouter.swift; sourceTree = SOURCE_ROOT; };
 		5C14520123956E7700441597 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkService.swift; path = idus/Data/NetworkData/Service/NetworkService.swift; sourceTree = SOURCE_ROOT; };
