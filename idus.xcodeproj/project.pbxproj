@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1DA2EB5593DC511B3ECCB80A /* Pods_idusUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 051C8CD8614A4B5FE42DA30C /* Pods_idusUITests.framework */; };
-		4DB2A6DEA279B8087629844B /* Pods_idus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12811E7E09BA13AA43AB48D /* Pods_idus.framework */; };
 		5C14518C239515F300441597 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C14518B239515F300441597 /* AppDelegate.swift */; };
 		5C145195239515F700441597 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C145194239515F700441597 /* Assets.xcassets */; };
 		5C145198239515F700441597 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C145196239515F700441597 /* LaunchScreen.storyboard */; };
@@ -48,6 +47,7 @@
 		5C145216239D5C8B00441597 /* ProductInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C145215239D5C8B00441597 /* ProductInfoCell.swift */; };
 		5C145218239D5CA400441597 /* ProductInfoCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C145217239D5CA400441597 /* ProductInfoCellViewModel.swift */; };
 		5C14521A239D5F0400441597 /* UILabel+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C145219239D5F0400441597 /* UILabel+Additions.swift */; };
+		5C2870D723A54D9E007CA573 /* Pods_idus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12811E7E09BA13AA43AB48D /* Pods_idus.framework */; };
 		5C681CF02395F4A8000189F2 /* ProductListViewController+CollectionViewDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C681CEF2395F4A8000189F2 /* ProductListViewController+CollectionViewDecorator.swift */; };
 		5C681CF22395F791000189F2 /* CollectionViewDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C681CF12395F791000189F2 /* CollectionViewDecorator.swift */; };
 		5CBCBE142396070C0098A60D /* ProductCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBCBE132396070C0098A60D /* ProductCellViewModel.swift */; };
@@ -188,7 +188,7 @@
 		5CF88B0B23A21D4900E03D2C /* network_error.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = network_error.json; sourceTree = "<group>"; };
 		5CF88B1123A3A55A00E03D2C /* ProductListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModelTest.swift; sourceTree = "<group>"; };
 		5CF88B1423A3A57B00E03D2C /* ProductCellViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellViewModelTest.swift; sourceTree = "<group>"; };
-		5CFA111223A3FDDD00B3358A /* XCTestCase+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Additions.swift"; sourceTree = SOURCE_ROOT; };
+		5CFA111223A3FDDD00B3358A /* XCTestCase+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "XCTestCase+Additions.swift"; path = "idusTests/XCTestCase+Additions.swift"; sourceTree = SOURCE_ROOT; };
 		5CFA111423A408DE00B3358A /* Mocker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocker.swift; sourceTree = "<group>"; };
 		5CFA111A23A486D000B3358A /* ProductDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProductDetailViewModel.swift; path = idusTests/Presentation/ProductDetailViewModel.swift; sourceTree = SOURCE_ROOT; };
 		5CFA111C23A4CC9300B3358A /* ThumbnailCollectionViewCellViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailCollectionViewCellViewModelTest.swift; sourceTree = "<group>"; };
@@ -212,7 +212,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DB2A6DEA279B8087629844B /* Pods_idus.framework in Frameworks */,
+				5C2870D723A54D9E007CA573 /* Pods_idus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,12 +297,12 @@
 		5C1451A1239515F700441597 /* idusTests */ = {
 			isa = PBXGroup;
 			children = (
+				5CF88B0423A2016C00E03D2C /* NetworkServiceStub.swift */,
+				5CFA111423A408DE00B3358A /* Mocker.swift */,
 				5CFA111123A3FDB000B3358A /* Extension */,
 				5CF88B1023A39EED00E03D2C /* Presentation */,
 				5CF88B0623A2067A00E03D2C /* JSON */,
 				5C1451A4239515F700441597 /* Info.plist */,
-				5CF88B0423A2016C00E03D2C /* NetworkServiceStub.swift */,
-				5CFA111423A408DE00B3358A /* Mocker.swift */,
 			);
 			path = idusTests;
 			sourceTree = "<group>";
