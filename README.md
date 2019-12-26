@@ -2,4 +2,4 @@
 
 * Clean Architectrue (Swift + MVVM)
 * Coordinator
-* TEST Code
+* Test Code
