@@ -7,39 +7,47 @@
 //
 
 import UIKit
+import Swinject
 
-struct Navigator {
+class Navigator {
 
-  enum Scene {
-    case productList
-    case productDetail(id: Int)
+  var container = Container()
+
+  init() {
+    setupRegistration()
   }
 
-  func navigate(at scene: Scene) -> UIViewController {
-    switch scene {
-    case .productList:
-      let viewModel = ProductListViewModel(
-        idusUseCase: IdusUseCaseImpl(
-          idusRepository: IdusRepository()
-        )
+  private func setupRegistration() {
+
+    //MARK: Network
+    container.register(NetworkServiceType.self) { _ in NetworkService() }
+
+    //MARK: Repository
+    container.register(IdusRepositoryType.self) { r in
+      IdusRepository(networkService: r.resolve(NetworkServiceType.self)!)
+    }
+
+    //MARK: UseCase
+    container.register(IdusUseCase.self) { r in
+      IdusUseCaseImpl(idusRepository: r.resolve(IdusRepositoryType.self)!)
+    }
+
+    //MARK: Scene
+
+    // list
+    container.register(BaseNavigationController.self) { r in
+      let viewModel = ProductListViewModel(idusUseCase: IdusUseCaseImpl(
+        idusRepository: r.resolve(IdusRepositoryType.self)!)
       )
-      let viewController = ProductListViewController(
-        viewModel: viewModel, navigator: self, transition: ZoomAnimator()
-      )
+      let viewController = ProductListViewController(viewModel: viewModel, navigator: self, transition: ZoomAnimator())
       let navigationController = BaseNavigationController(rootViewController: viewController)
-
       return navigationController
+    }
 
-    case .productDetail(let id):
-      let viewModel = ProductDetailViewModel(
-        idusUseCase: IdusUseCaseImpl(
-          idusRepository: IdusRepository()
-        ),
-        id: id
-      )
+    // detail
+    container.register(ProductDetailViewController.self) { (r, id: Int) in
+      let viewModel = ProductDetailViewModel(idusUseCase: r.resolve(IdusUseCase.self)!, id: id)
       let viewController = ProductDetailViewController(viewModel: viewModel)
-      viewController.modalPresentationStyle = .fullScreen
-
       return viewController
     }
   }

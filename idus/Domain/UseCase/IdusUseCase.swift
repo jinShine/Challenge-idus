@@ -16,9 +16,9 @@ protocol IdusUseCase {
 
 final class IdusUseCaseImpl: IdusUseCase {
 
-  private let idusRepository: IdusRepository
+  private let idusRepository: IdusRepositoryType
 
-  init(idusRepository: IdusRepository) {
+  init(idusRepository: IdusRepositoryType) {
     self.idusRepository = idusRepository
   }
 

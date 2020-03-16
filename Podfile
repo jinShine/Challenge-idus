@@ -15,6 +15,7 @@ target 'idus' do
   
   # Utility
   pod 'Kingfisher', '~> 4.0'
+  pod 'Swinject'
   
 
   target 'idusTests' do

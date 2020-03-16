@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   private func setupRoot() {
     let window = UIWindow(frame: UIScreen.main.bounds)
     let navigator = Navigator()
-    window.rootViewController = navigator.navigate(at: .productList)
+    window.rootViewController = navigator.container.resolve(BaseNavigationController.self)
     window.backgroundColor = .white
     window.makeKeyAndVisible()
     self.window = window

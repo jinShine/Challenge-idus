@@ -123,7 +123,9 @@ final class ProductListViewController: BaseViewController {
 
   func openDetail(indexPath: IndexPath) {
     let id = viewModel.productList[indexPath.item].id
-    let productDetailVC = navigator.navigate(at: .productDetail(id: id))
+
+    let productDetailVC = navigator.container.resolve(ProductDetailViewController.self, argument: id)!
+//    let productDetailVC = navigator.navigate(at: .productDetail(id: id))
     productDetailVC.transitioningDelegate = self
 
     let thumbnailURL = URL(string: viewModel.productList[indexPath.item].thumbnail)
