@@ -13,7 +13,6 @@ import Kingfisher
 class BaseCollectionViewCell: UICollectionViewCell {
   
   //MARK:- Init
-
   override init(frame: CGRect) {
     super.init(frame: frame)
     

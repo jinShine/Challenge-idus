@@ -17,13 +17,12 @@ DEPENDENCIES:
   - Swinject
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  trunk:
     - Alamofire
     - Kingfisher
     - Moya
     - Result
     - SnapKit
-  trunk:
     - Swinject
 
 SPEC CHECKSUMS:
@@ -36,4 +35,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: d25de1e1409340fa9f23df22be5cc665cb0fe9b0
 
-COCOAPODS: 1.8.0.beta.1
+COCOAPODS: 1.9.3

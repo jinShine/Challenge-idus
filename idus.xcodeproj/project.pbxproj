@@ -18,7 +18,6 @@
 		5C1451CF2395211E00441597 /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1451CE2395211E00441597 /* ProductListViewModel.swift */; };
 		5C1451D12395252000441597 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1451D02395252000441597 /* BaseNavigationController.swift */; };
 		5C1451D5239545E200441597 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1451D4239545E200441597 /* ProductCell.swift */; };
-		5C1451D72395487000441597 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1451D62395487000441597 /* BaseCollectionViewCell.swift */; };
 		5C1451D923954C3F00441597 /* UIView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1451D823954C3F00441597 /* UIView+Additions.swift */; };
 		5C1451DB23954C5400441597 /* CALayer+Sketch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1451DA23954C5400441597 /* CALayer+Sketch.swift */; };
 		5C1451DD23954D1B00441597 /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1451DC23954D1B00441597 /* UIColor+Additions.swift */; };
@@ -78,6 +77,7 @@
 		5CFD688323962197004E19E4 /* DebugPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFD688223962197004E19E4 /* DebugPrint.swift */; };
 		5CFD6885239637C9004E19E4 /* Data+Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFD6884239637C9004E19E4 /* Data+Decode.swift */; };
 		CFBA625EC56A705F0F790615 /* Pods_idusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CEF71EF7F67D6A9D8A98E2F /* Pods_idusTests.framework */; };
+		EC51CC6A25495C7D00B75325 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC51CC6925495C7D00B75325 /* BaseCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,13 +111,12 @@
 		5C1451A9239515F700441597 /* idusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = idusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C1451AD239515F700441597 /* idusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = idusUITests.swift; sourceTree = "<group>"; };
 		5C1451AF239515F700441597 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5C1451C823951D3600441597 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = idus/Core/BaseViewController.swift; sourceTree = SOURCE_ROOT; };
+		5C1451C823951D3600441597 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = idus/Core/Base/BaseViewController.swift; sourceTree = SOURCE_ROOT; };
 		5C1451CA23951FBC00441597 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
-		5C1451CC2395211300441597 /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProductListViewController.swift; path = idus/Presentation/ProductListViewController.swift; sourceTree = SOURCE_ROOT; };
+		5C1451CC2395211300441597 /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProductListViewController.swift; path = idus/Presentation/Scenes/ProductList/ProductListViewController.swift; sourceTree = SOURCE_ROOT; };
 		5C1451CE2395211E00441597 /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
-		5C1451D02395252000441597 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseNavigationController.swift; path = idus/BaseNavigationController.swift; sourceTree = SOURCE_ROOT; };
+		5C1451D02395252000441597 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseNavigationController.swift; path = idus/Core/Base/BaseNavigationController.swift; sourceTree = SOURCE_ROOT; };
 		5C1451D4239545E200441597 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
-		5C1451D62395487000441597 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseCollectionViewCell.swift; path = idus/BaseCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
 		5C1451D823954C3F00441597 /* UIView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Additions.swift"; sourceTree = "<group>"; };
 		5C1451DA23954C5400441597 /* CALayer+Sketch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Sketch.swift"; sourceTree = "<group>"; };
 		5C1451DC23954D1B00441597 /* UIColor+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Additions.swift"; sourceTree = "<group>"; };
@@ -125,22 +124,22 @@
 		5C1451E823955D6400441597 /* NotoSansCJKkr-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Black.otf"; sourceTree = "<group>"; };
 		5C1451F323955E9400441597 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		5C1451F523955EAA00441597 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = App.swift; path = idus/Core/App.swift; sourceTree = SOURCE_ROOT; };
-		5C1451F72395623200441597 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Color.swift; path = idus/Color.swift; sourceTree = SOURCE_ROOT; };
-		5C1451FF23956B6A00441597 /* IdusRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IdusRouter.swift; path = idus/Data/NetworkData/IdusRouter.swift; sourceTree = SOURCE_ROOT; };
-		5C14520123956E7700441597 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkService.swift; path = idus/Data/NetworkData/Service/NetworkService.swift; sourceTree = SOURCE_ROOT; };
+		5C1451F72395623200441597 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Color.swift; path = idus/Utility/Theme/Color.swift; sourceTree = SOURCE_ROOT; };
+		5C1451FF23956B6A00441597 /* IdusRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IdusRouter.swift; path = idus/Data/NetworkData/Service/Router/IdusRouter.swift; sourceTree = SOURCE_ROOT; };
+		5C14520123956E7700441597 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkService.swift; path = idus/Data/NetworkData/Service/Network/NetworkService.swift; sourceTree = SOURCE_ROOT; };
 		5C1452032395705500441597 /* NetworkDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataResponse.swift; sourceTree = "<group>"; };
 		5C1452052395707800441597 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		5C1452082395751A00441597 /* IdusErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IdusErrorModel.swift; path = idus/Domain/Entity/IdusErrorModel.swift; sourceTree = SOURCE_ROOT; };
 		5C14520B2399644600441597 /* ThumbnailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ThumbnailCollectionViewCell.swift; path = idus/Presentation/Scenes/ProductDetail/Cell/ThumbnailCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
 		5C14520D2399645C00441597 /* ThumbnailCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ThumbnailCollectionViewCellViewModel.swift; path = idus/Presentation/Scenes/ProductDetail/Cell/ThumbnailCollectionViewCellViewModel.swift; sourceTree = SOURCE_ROOT; };
 		5C14520F239965F400441597 /* ProductDetailViewController+TableViewDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductDetailViewController+TableViewDecorator.swift"; sourceTree = "<group>"; };
-		5C1452112399697900441597 /* TableViewDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TableViewDecorator.swift; path = idus/TableViewDecorator.swift; sourceTree = SOURCE_ROOT; };
-		5C14521323996B9B00441597 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseTableViewCell.swift; path = idus/Core/BaseTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		5C1452112399697900441597 /* TableViewDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TableViewDecorator.swift; path = idus/Core/Base/TableViewDecorator.swift; sourceTree = SOURCE_ROOT; };
+		5C14521323996B9B00441597 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseTableViewCell.swift; path = idus/Core/Base/BaseTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		5C145215239D5C8B00441597 /* ProductInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInfoCell.swift; sourceTree = "<group>"; };
 		5C145217239D5CA400441597 /* ProductInfoCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProductInfoCellViewModel.swift; path = idus/Presentation/Scenes/ProductDetail/Cell/ProductInfoCellViewModel.swift; sourceTree = SOURCE_ROOT; };
-		5C145219239D5F0400441597 /* UILabel+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UILabel+Additions.swift"; path = "idus/UILabel+Additions.swift"; sourceTree = SOURCE_ROOT; };
+		5C145219239D5F0400441597 /* UILabel+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UILabel+Additions.swift"; path = "idus/Utility/Extension/UILabel+Additions.swift"; sourceTree = SOURCE_ROOT; };
 		5C681CEF2395F4A8000189F2 /* ProductListViewController+CollectionViewDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductListViewController+CollectionViewDecorator.swift"; sourceTree = "<group>"; };
-		5C681CF12395F791000189F2 /* CollectionViewDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CollectionViewDecorator.swift; path = idus/Presentation/Scenes/ProductList/CollectionViewDecorator.swift; sourceTree = SOURCE_ROOT; };
+		5C681CF12395F791000189F2 /* CollectionViewDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CollectionViewDecorator.swift; path = idus/Core/Base/CollectionViewDecorator.swift; sourceTree = SOURCE_ROOT; };
 		5CBCBE132396070C0098A60D /* ProductCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellViewModel.swift; sourceTree = "<group>"; };
 		5CBCBE18239608DA0098A60D /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		5CDECF00239D660B00109136 /* SF-Pro-Text-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Heavy.otf"; sourceTree = "<group>"; };
@@ -181,6 +180,7 @@
 		C12811E7E09BA13AA43AB48D /* Pods_idus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_idus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB20D3B1409607726431D3B3 /* Pods-idusUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-idusUITests.debug.xcconfig"; path = "Target Support Files/Pods-idusUITests/Pods-idusUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E8C2DE9D4112D3A7EEACE47F /* Pods-idusTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-idusTests.release.xcconfig"; path = "Target Support Files/Pods-idusTests/Pods-idusTests.release.xcconfig"; sourceTree = "<group>"; };
+		EC51CC6925495C7D00B75325 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -383,12 +383,12 @@
 			children = (
 				5C1451C823951D3600441597 /* BaseViewController.swift */,
 				5C1451D02395252000441597 /* BaseNavigationController.swift */,
-				5C1451D62395487000441597 /* BaseCollectionViewCell.swift */,
 				5C14521323996B9B00441597 /* BaseTableViewCell.swift */,
 				5C681CF12395F791000189F2 /* CollectionViewDecorator.swift */,
 				5CF88A8B23977F5100E03D2C /* RefreshFooterView.swift */,
 				5C1452112399697900441597 /* TableViewDecorator.swift */,
 				5CF88ACC23A081C300E03D2C /* ZoomAnimator.swift */,
+				EC51CC6925495C7D00B75325 /* BaseCollectionViewCell.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -484,8 +484,7 @@
 			children = (
 				5CDECF00239D660B00109136 /* SF-Pro-Text-Heavy.otf */,
 			);
-			name = SFPro;
-			path = "New Group1";
+			path = SFPro;
 			sourceTree = "<group>";
 		};
 		5CF88A8E2398ECCB00E03D2C /* ProductDetail */ = {
@@ -843,9 +842,9 @@
 				5C1451D12395252000441597 /* BaseNavigationController.swift in Sources */,
 				5CF88AA5239E4BB300E03D2C /* NoticeCell.swift in Sources */,
 				5C1451CB23951FBC00441597 /* Navigator.swift in Sources */,
-				5C1451D72395487000441597 /* BaseCollectionViewCell.swift in Sources */,
 				5CF88A932398ECEA00E03D2C /* ProductDetailViewModel.swift in Sources */,
 				5C1451DB23954C5400441597 /* CALayer+Sketch.swift in Sources */,
+				EC51CC6A25495C7D00B75325 /* BaseCollectionViewCell.swift in Sources */,
 				5CFD688323962197004E19E4 /* DebugPrint.swift in Sources */,
 				5CFD6885239637C9004E19E4 /* Data+Decode.swift in Sources */,
 				5C681CF22395F791000189F2 /* CollectionViewDecorator.swift in Sources */,
